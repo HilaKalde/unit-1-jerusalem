@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="no-js" dir="rtl" lang="he">
+<html dir="rtl" lang="he">
 <head>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
@@ -19,7 +19,7 @@ b{ font-weight:800; }
 
 .page{ width:min(900px,100%); margin:0 auto; position:relative; overflow:hidden; background:#fff; color:var(--text); }
 .checker{ height:14px; background:repeating-conic-gradient(#0a1f3f 0 25%,#fff 0 50%) 0 0/14px 14px; }
-.foot{ height:12px; margin-top:56px; background:repeating-linear-gradient(90deg,var(--red) 0 28px,#fff 28px 56px); }
+.foot{ height:12px; margin-top:40px; background:repeating-linear-gradient(90deg,var(--red) 0 28px,#fff 28px 56px); }
 
 /* ===== header ===== */
 .hdr{ display:flex; justify-content:space-between; align-items:center; padding:24px 34px 0; position:relative; z-index:3; }
@@ -28,7 +28,7 @@ b{ font-weight:800; }
 .partners .sep{ width:1.5px; height:44px; background:#c9d4e2; }
 
 /* ===== hero (screen 1) ===== */
-.hero1{ position:relative; height:760px; margin-top:-30px; }
+.hero1{ position:relative; height:620px; margin-top:-30px; }
 .hero1 .ph{ position:absolute; left:0; top:0; width:56%; height:100%; background:url("assets/bg_oldcity_road.jpg") 50% 40%/cover no-repeat;
   -webkit-mask-image:linear-gradient(to right,#000 35%,transparent 100%),linear-gradient(to bottom,transparent 0,#000 18%,#000 80%,transparent 100%); -webkit-mask-composite:source-in;
   mask-image:linear-gradient(to right,#000 35%,transparent 100%),linear-gradient(to bottom,transparent 0,#000 18%,#000 80%,transparent 100%); mask-composite:intersect; }
@@ -37,8 +37,6 @@ b{ font-weight:800; }
 .hero1 .title{ position:absolute; right:26px; top:160px; width:510px; } .hero1 .title img{ width:100%; filter:drop-shadow(0 10px 12px rgba(11,35,64,.25)); }
 .hero1 .txt{ position:absolute; right:40px; top:340px; width:440px; }
 .hero1 .txt p.lead{ font-size:34px; line-height:1.15; font-weight:800; color:#111; } .hero1 .txt p.lead b{ color:var(--blue); }
-.rainbow{ height:7px; width:100%; border-radius:4px; background:linear-gradient(90deg,#1b9be0,#6cb33f,#ffc81f,#ff9a1f,#e6007e); }
-.hero1 .rainbow{ margin:14px 0; }
 .hero1 .txt p{ font-size:21px; line-height:1.55; margin-bottom:8px; }
 .hero1 .go{ font-size:27px; font-weight:800; color:var(--red); margin-top:8px; }
 .start{ display:inline-flex; align-items:center; gap:12px; margin-top:16px; padding:10px 26px 12px; background:var(--red); color:#fff; font-size:24px; font-weight:800; text-decoration:none; transform:skewX(-8deg); box-shadow:0 8px 16px rgba(224,36,58,.35); transition:transform .2s; }
@@ -47,16 +45,16 @@ b{ font-weight:800; }
 .start:hover{ transform:skewX(-8deg) translateY(-3px); }
 
 /* ===== shared section card ===== */
-.card{ position:relative; margin:0 28px; background:#fff; border-radius:30px; box-shadow:0 14px 34px rgba(11,35,64,.16); padding:34px 36px 30px; }
-.card{ margin-top:0; }
+.card{ position:relative; margin:0 28px; background:#fff; border-radius:30px; box-shadow:0 14px 34px rgba(11,35,64,.16); padding:28px 36px 24px; }
+.card{ margin-top:32px; } #ch1{ margin-top:0; }
 .card h2{ display:flex; align-items:center; justify-content:center; gap:16px; font-size:35px; font-weight:800; color:#111; text-align:center; line-height:1.15; }
 .card h2 i{ flex:0 0 74px; height:24px; transform:skewX(-20deg); background:repeating-conic-gradient(#1b9be0 0 25%,#fff 0 50%) 0 0/12px 12px; }
 .card .sub-h{ text-align:center; font-size:24px; font-weight:800; color:var(--blue); margin-top:6px; }
 .card p{ font-size:22px; line-height:1.55; }
-.card p.c{ text-align:center; margin:14px auto 0; max-width:720px; }
+.card p.c{ text-align:center; margin:12px auto 0; max-width:720px; }
 .station{ display:table; margin:0 auto 12px; background:var(--yellow); color:var(--ink); font-size:17px; font-weight:800; padding:3px 18px 5px; transform:skewX(-10deg); }
 .station span{ display:block; transform:skewX(10deg); }
-.photo-band{ height:220px; margin:-34px -36px 26px; border-radius:30px 30px 0 0; background:var(--img) center/cover no-repeat; position:relative; }
+.photo-band{ height:180px; margin:-30px -36px 22px; border-radius:30px 30px 0 0; background:var(--img) center/cover no-repeat; position:relative; }
 .photo-band::after{ content:""; position:absolute; inset:auto 0 0 0; height:90px; background:linear-gradient(to bottom,transparent,#fff); }
 
 /* ===== screen 2 ===== */
@@ -66,7 +64,7 @@ b{ font-weight:800; }
 .aud div:last-child{ border-left:0; }
 .sky{ width:100%; margin-top:8px; }
 .feats{ display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin-top:22px; }
-.feat{ background:var(--sky); border-radius:20px; padding:18px 18px 20px; border-top:6px solid var(--c); }
+.feat{ background:var(--sky); border-radius:20px; padding:18px 18px 20px; }
 .feat h3{ font-size:23px; font-weight:800; color:var(--ink); margin-bottom:6px; line-height:1.2; }
 .feat p{ font-size:19px; line-height:1.45; }
 .fin{ position:relative; display:flex; flex-direction:column; align-items:flex-start; justify-content:center; gap:14px; min-height:250px; margin-top:22px; padding:22px 300px 22px 28px; background:var(--sky); border-radius:22px; }
@@ -75,14 +73,16 @@ b{ font-weight:800; }
 /* agent images: holding a sign / waving a race flag */
 .fin .agent-wrap{ position:absolute; right:12px; bottom:0; height:calc(100% + 40px); aspect-ratio:1222/1287; z-index:2; }
 .agent-wrap > img{ display:block; width:100%; height:100%; object-fit:contain; }
-.with-sign{ min-height:270px; padding-right:340px; }
+.with-sign{ min-height:250px; padding-right:340px; align-items:flex-start; justify-content:center; }
 .sign-btn{ position:absolute; left:10%; width:75%; top:59%; height:32%; background:transparent; border:0; border-radius:12px; display:flex; flex-direction:column; align-items:center; justify-content:center; color:var(--ink); font-size:22px; font-weight:800; line-height:1.1; animation:pulse 1.8s ease-in-out infinite; transition:background .2s; }
 .sign-btn b{ color:var(--red); font-size:27px; margin-bottom:2px; }
 .sign-btn:hover{ background:rgba(255,200,31,.28); animation-duration:.9s; }
 .flagbox{ min-height:270px; padding-right:350px; }
-.flag-btn{ position:absolute; left:11%; top:15%; width:34%; height:17%; display:grid; place-items:center; text-align:center; background:#fff; border:3px solid var(--red); border-radius:10px; color:var(--ink); font-size:18px; font-weight:800; line-height:1.05; transform:rotate(17deg); animation:ring 1.8s ease-out infinite; transition:transform .2s; }
-.flag-btn:hover{ transform:rotate(17deg) scale(1.08); }
 @keyframes ring{ 0%{ box-shadow:0 0 0 0 rgba(224,36,58,.55); } 100%{ box-shadow:0 0 0 14px rgba(224,36,58,0); } }
+.hold-txt{ display:flex; flex-direction:column; align-items:flex-start; gap:16px; }
+.more-btn{ display:inline-flex; align-items:center; gap:10px; background:var(--red); color:#fff; border:0; border-radius:999px; font-size:20px; font-weight:800; padding:8px 24px 10px 18px; box-shadow:0 8px 16px rgba(224,36,58,.3); animation:ring 1.8s ease-out infinite; transition:transform .2s,background .2s; }
+.more-btn svg{ width:20px; height:20px; fill:#fff; }
+.more-btn:hover{ background:#c01a2e; transform:translateY(-2px); }
 .sign-y{ display:table; white-space:nowrap; background:var(--yellow); color:var(--ink); font-size:28px; font-weight:800; padding:6px 26px 9px; transform:skewX(-8deg); box-shadow:0 8px 14px rgba(11,35,64,.18); }
 .sign-y span{ display:block; transform:skewX(8deg); }
 
@@ -104,10 +104,9 @@ b{ font-weight:800; }
 @keyframes wiggle{ 0%,100%{ transform:rotate(-6deg); } 50%{ transform:rotate(-2deg); } }
 @keyframes pulse{ 0%,100%{transform:scale(1)} 50%{transform:scale(1.07)} }
 
-/* ===== modal ===== */
-dialog.pop{ width:min(640px,calc(100% - 32px)); border:0; padding:0; border-radius:28px; background:transparent; color:var(--text); overflow:visible; }
-dialog.pop::backdrop{ background:rgba(6,20,45,.62); backdrop-filter:blur(3px); }
-dialog.pop[open]{ animation:popIn .35s cubic-bezier(.2,1.3,.4,1); }
+/* ===== modal (state-driven overlay) ===== */
+.pop-ov{ position:fixed; inset:0; z-index:100; display:grid; place-items:center; padding:16px; background:rgba(6,20,45,.62); }
+.pop{ width:min(640px,100%); animation:popIn .35s cubic-bezier(.2,1.3,.4,1); }
 @keyframes popIn{ from{ transform:scale(.85); opacity:0; } to{ transform:none; opacity:1; } }
 .pop-in{ position:relative; background:#fff; border-radius:28px; padding:40px 34px 30px; box-shadow:0 20px 50px rgba(0,0,0,.35); overflow:hidden; }
 .pop-in::before{ content:""; position:absolute; top:0; left:0; right:0; height:12px; background:repeating-conic-gradient(#0a1f3f 0 25%,#fff 0 50%) 0 0/12px 12px; }
@@ -200,7 +199,7 @@ dialog.pop[open]{ animation:popIn .35s cubic-bezier(.2,1.3,.4,1); }
 .team-all{ display:flex; align-items:center; gap:18px; margin-top:16px; padding:14px 22px; border-radius:20px; background:linear-gradient(90deg,#1f64b8,#0b2d62); color:#fff; }
 .team-all img{ width:74px; height:74px; border-radius:50%; object-fit:cover; flex:none; box-shadow:0 0 0 4px rgba(255,255,255,.35); }
 .team-all p{ font-size:22px; font-weight:800; color:#fff; }
-.shift-h{ display:flex; align-items:center; justify-content:center; gap:12px; margin:36px 0 6px; font-size:30px; font-weight:800; color:#111; }
+.shift-h{ display:flex; align-items:center; justify-content:center; gap:12px; margin:28px 0 6px; font-size:30px; font-weight:800; color:#111; }
 .shift-h img{ width:42px; }
 .shift{ position:relative; margin-top:14px; padding-right:62px; }
 .shift::before{ content:""; position:absolute; right:14px; top:10px; bottom:10px; width:34px; border-radius:17px; background:#2f3640; box-shadow:inset 5px 0 0 -1px #fff,inset -5px 0 0 -1px #fff; }
@@ -228,31 +227,66 @@ dialog.pop[open]{ animation:popIn .35s cubic-bezier(.2,1.3,.4,1); }
 .gauge{ display:flex; justify-content:center; gap:14px; margin:4px 0 14px; }
 .gauge svg{ width:58px; height:58px; transition:transform .3s; }
 .gauge svg.on{ transform:scale(1.22); filter:drop-shadow(0 6px 8px rgba(63,174,73,.45)); }
-.finale{ margin:0 28px; display:grid; gap:18px; }
-.finale figure{ position:relative; margin:0; border-radius:26px; overflow:hidden; box-shadow:0 14px 30px rgba(11,35,64,.25); }
-.finale figure img,.finale video{ display:block; width:100%; aspect-ratio:16/9; object-fit:cover; }
-.suit p{ position:absolute; right:5%; top:9%; width:50%; text-align:center; font-size:46px; font-weight:800; line-height:1.15; color:#fff; text-shadow:0 3px 12px rgba(0,0,0,.5); }
-.suit p b{ color:var(--yellow); }
-.startline::after{ content:""; position:absolute; inset:45% 0 0; background:linear-gradient(to bottom,transparent,rgba(5,15,35,.85)); pointer-events:none; }
-.startline p{ position:absolute; z-index:1; right:0; left:0; bottom:8%; text-align:center; font-size:44px; font-weight:800; line-height:1.15; color:#fff; text-shadow:0 3px 12px rgba(0,0,0,.6); }
-.startline p b{ color:var(--yellow); }
-.startline .chk{ position:absolute; z-index:1; left:0; right:0; bottom:0; height:14px; background:repeating-conic-gradient(#0a1f3f 0 25%,#fff 0 50%) 0 0/14px 14px; }
-.safra{ height:280px; background:url("assets/safra.png") center/cover no-repeat,url("assets/ic_city.jpg") center/cover no-repeat; }
+.safra{ height:220px; background:url("assets/ic_city.jpg") center/cover no-repeat; }
 .safra .s-tag{ position:absolute; z-index:2; right:26px; bottom:58px; display:flex; align-items:center; gap:8px; background:#fff; color:var(--ink); font-size:21px; font-weight:800; padding:6px 18px 8px 14px; border-radius:999px; box-shadow:0 8px 16px rgba(11,35,64,.25); }
 .safra .s-tag img{ width:26px; }
 .safra .st-tag{ position:absolute; z-index:2; left:26px; top:20px; display:flex; align-items:center; gap:12px; background:var(--navy); color:#fff; font-size:22px; font-weight:800; padding:6px 18px 8px 8px; border-radius:10px; box-shadow:0 8px 16px rgba(0,0,0,.3); }
 .safra .st-tag i{ width:30px; height:30px; border-radius:4px; background:repeating-conic-gradient(#0a1f3f 0 25%,#fff 0 50%) 0 0/10px 10px; }
 
+/* ===== station 4 infographic: nested rings + gauges ===== */
+.ring-map{ display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:28px; align-items:center; margin-top:24px; }
+.rings{ display:grid; place-items:center; }
+.ring{ box-sizing:border-box; border-radius:50%; display:flex; flex-direction:column; align-items:center; }
+.r1{ width:370px; height:370px; padding-top:20px; background:radial-gradient(circle,#f3f8ff 0,#d6e8fb 100%); border:3px dashed #9fbde3; }
+.r2{ width:262px; height:262px; margin-top:10px; padding-top:18px; background:radial-gradient(circle,#d9eafc 0,#a9ccf3 100%); border:4px solid #fff; box-shadow:0 10px 22px rgba(11,35,64,.18); }
+.r3{ position:relative; width:156px; height:156px; margin-top:10px; justify-content:center; gap:4px; color:#fff; background:linear-gradient(180deg,#1f64b8,#0b2d62); box-shadow:0 0 0 6px #fff,0 0 0 11px var(--red),0 12px 24px rgba(11,35,64,.35); }
+.rl{ font-size:19px; font-weight:800; color:var(--navy); }
+.r3 > img{ width:56px; height:56px; border-radius:50%; object-fit:cover; box-shadow:0 0 0 3px rgba(255,255,255,.5); }
+.r3 b{ font-size:21px; }
+.here2{ position:absolute; bottom:-20px; display:flex; align-items:center; gap:5px; background:var(--red); color:#fff; font-size:16px; font-weight:800; padding:3px 12px 5px 9px; border-radius:999px; white-space:nowrap; animation:bob 1.6s ease-in-out infinite; }
+.here2 img{ width:18px; height:18px; filter:brightness(0) invert(1); }
+.gauges{ display:grid; gap:14px; }
+.gauge-card{ position:relative; overflow:hidden; display:flex; align-items:center; gap:18px; padding:12px 20px 16px; border-radius:20px; color:#fff; background:linear-gradient(180deg,#1f64b8,#0b2d62); box-shadow:0 10px 20px rgba(11,35,64,.2); }
+.gauge-card::after{ content:""; position:absolute; left:0; right:0; bottom:0; height:7px; background:repeating-conic-gradient(#0a1f3f 0 25%,#fff 0 50%) 0 0/7px 7px; }
+.gauge-card svg{ width:112px; height:66px; flex:none; }
+.gauge-card .n{ font-size:38px; font-weight:800; line-height:1; color:var(--yellow); }
+.gauge-card .n small{ font-size:20px; color:#fff; }
+.gauge-card .l{ font-size:19px; font-weight:700; margin-top:4px; }
+.eyes{ display:flex; align-items:center; gap:18px; margin-top:30px; padding:18px 24px; border-radius:22px; background:var(--sky); }
+.eyes .gl{ width:72px; height:72px; flex:none; }
+.eyes .gl svg{ width:34px; height:34px; }
+.eyes h3{ font-size:24px; font-weight:800; color:var(--blue); margin-bottom:2px; }
+.eyes p{ font-size:20px; }
+
+/* ===== station header: text right, photo left, in a light-blue box ===== */
+.ch-head{ display:grid; grid-template-columns:minmax(0,1fr) 320px; gap:26px; align-items:center; margin:0 0 14px; padding:16px 26px 16px 16px; border-radius:24px; background:var(--sky); }
+.card .ch-head h2{ justify-content:flex-start; text-align:right; font-size:34px; }
+.card .ch-head h2 i{ flex-basis:54px; }
+.card .ch-head h2 i:last-child{ display:none; }
+.card .ch-head .sub-h{ text-align:right; margin-top:8px; }
+.ch-img{ position:relative; overflow:hidden; height:160px; border-radius:18px; background:var(--img) center 38%/cover no-repeat; box-shadow:0 10px 20px rgba(11,35,64,.2); }
+.ch-img.safra{ height:160px; background:url("assets/ic_city.jpg") center 40%/cover no-repeat; }
+.ch-img.safra .s-tag{ right:12px; bottom:12px; font-size:16px; padding:4px 14px 6px 10px; }
+.ch-img.safra .s-tag img{ width:20px; }
+.ch-img.safra .st-tag{ left:12px; top:12px; font-size:17px; }
+.img-p3{ --img:url("assets/photo_p3.jpg"); } .img-p5{ --img:url("assets/photo_p5.jpg"); } .img-p6{ --img:url("assets/photo_p6.jpg"); } .img-p8{ --img:url("assets/photo_p8.jpg"); }
+
+/* ===== blue banner with the agent at the bottom of each station ===== */
+.agent-bar{ position:relative; display:flex; flex-direction:column; align-items:flex-start; justify-content:center; gap:16px; min-height:166px; margin-top:68px; padding:24px 36px 26px 300px; border-radius:28px; background:linear-gradient(180deg,#1f64b8,#0b2d62); box-shadow:0 14px 26px rgba(11,35,64,.3); }
+.agent-bar::after{ content:""; position:absolute; right:0; bottom:0; width:120px; height:16px; border-radius:0 0 28px 0; background:repeating-conic-gradient(#0a1f3f 0 25%,#fff 0 50%) 0 0/16px 16px; }
+.agent-bar .who{ position:absolute; left:22px; bottom:0; height:calc(100% + 64px); aspect-ratio:1222/1287; }
+.agent-bar .who > img{ display:block; width:100%; height:100%; object-fit:contain; transform:scaleX(-1); filter:drop-shadow(0 12px 14px rgba(0,0,0,.3)); }
+.agent-bar .sign-btn{ left:15%; width:74%; }
+.agent-bar .sign-y{ font-size:30px; }
+
 /* ===== structure: station badges, road connectors, progress bar ===== */
-.card[id^="ch"],.finale{ scroll-margin-top:84px; }
+.card[id^="ch"]{ scroll-margin-top:84px; }
 .st-badge{ position:absolute; top:-19px; right:34px; z-index:4; display:flex; align-items:center; gap:8px; background:var(--yellow); color:var(--ink); font-size:18px; font-weight:800; padding:4px 18px 6px; transform:skewX(-10deg); box-shadow:0 6px 12px rgba(11,35,64,.2); }
 .st-badge span{ display:block; transform:skewX(10deg); }
-.conn{ position:relative; width:46px; height:78px; margin:0 auto; background:repeating-linear-gradient(180deg,var(--red) 0 12px,#fff 12px 24px) right/6px 100% no-repeat,repeating-linear-gradient(180deg,var(--red) 0 12px,#fff 12px 24px) left/6px 100% no-repeat,#2f3640; }
-.conn::after{ content:""; position:absolute; left:50%; top:6px; bottom:6px; width:4px; transform:translateX(-50%); background:repeating-linear-gradient(180deg,#fff 0 12px,transparent 12px 22px); animation:drive 1s linear infinite; }
 @keyframes drive{ to{ background-position:0 22px; } }
-.card .tb{ margin:64px 0 0; }
+.card .tb{ margin:52px 0 0; }
 .card .pop-btn .sign,.card .tb-row .sign{ font-size:26px; white-space:nowrap; }
-.next{ display:table; margin:34px auto 0; text-decoration:none; background:var(--navy); color:#fff; border-radius:999px; padding:8px 24px 10px 18px; font-size:19px; font-weight:700; box-shadow:0 8px 16px rgba(11,35,64,.25); transition:transform .2s,background .2s; }
+.next{ display:table; margin:24px auto 0; text-decoration:none; background:var(--navy); color:#fff; border-radius:999px; padding:8px 24px 10px 18px; font-size:19px; font-weight:700; box-shadow:0 8px 16px rgba(11,35,64,.25); transition:transform .2s,background .2s; }
 .next span{ display:flex; align-items:center; gap:10px; }
 .next b{ color:var(--yellow); }
 .next svg{ width:22px; height:22px; fill:#fff; animation:bob 1.6s ease-in-out infinite; }
@@ -271,7 +305,7 @@ dialog.pop[open]{ animation:popIn .35s cubic-bezier(.2,1.3,.4,1); }
 /* ===== reveal on scroll ===== */
 .js .rv{ opacity:0; transform:translateY(26px); transition:opacity .6s ease,transform .6s ease; }
 .js .rv.in{ opacity:1; transform:none; }
-@media (prefers-reduced-motion:reduce){ .js .rv{ opacity:1; transform:none; transition:none; } .pop-btn .go,.lvl.me .here,.conn::after,.next svg,.sign-btn,.flag-btn,.note-btn,.route .pin,.link .track,.link .packet{ animation:none; } html{ scroll-behavior:auto; } }
+@media (prefers-reduced-motion:reduce){ .js .rv{ opacity:1; transform:none; transition:none; } .pop-btn .go,.lvl.me .here,.next svg,.sign-btn,.more-btn,.here2,.note-btn,.route .pin,.link .track,.link .packet{ animation:none; } html{ scroll-behavior:auto; } }
 
 /* ===== mobile ===== */
 @media (max-width:760px){
@@ -285,8 +319,11 @@ dialog.pop[open]{ animation:popIn .35s cubic-bezier(.2,1.3,.4,1); }
  .card{ margin:0 12px; padding:30px 16px 22px; border-radius:24px; } .card .tb{ margin:56px 0 0; }
   .st-badge{ right:18px; font-size:15px; } .next{ font-size:16px; padding:7px 18px 9px 14px; }
  .race{ padding:7px 10px 5px; } .race a span{ display:none; } .race a i{ width:28px; height:28px; font-size:14px; } .race-in::before,.race-fill{ top:12px; }
- .fin .agent-wrap{ position:relative; right:auto; bottom:auto; height:240px; align-self:center; margin-top:-34px; } .with-sign,.flagbox{ min-height:0; padding:0 16px 18px; } .sign-btn{ font-size:16px; } .sign-btn b{ font-size:19px; } .flag-btn{ font-size:14px; border-width:2px; }
- .photo-band{ height:150px; margin:-24px -16px 18px; border-radius:24px 24px 0 0; }
+ .ring-map{ grid-template-columns:1fr; } .r1{ width:300px; height:300px; } .r2{ width:212px; height:212px; } .r3{ width:128px; height:128px; } .r3 > img{ width:42px; height:42px; } .r3 b{ font-size:17px; } .rl{ font-size:16px; }
+ .gauge-card .n{ font-size:30px; } .gauge-card svg{ width:90px; height:54px; } .eyes{ align-items:flex-start; } .eyes .gl{ width:56px; height:56px; } .more-btn{ font-size:17px; }
+ .ch-head{ grid-template-columns:1fr; gap:14px; padding:14px; } .ch-img{ order:-1; height:150px; } .card .ch-head h2{ font-size:24px; } .card .ch-head h2 i{ flex-basis:26px; }
+ .agent-bar{ align-items:center; text-align:center; min-height:0; margin-top:150px; padding:118px 16px 26px; } .agent-bar .who{ left:50%; bottom:auto; top:-128px; height:236px; transform:translateX(-50%); } .agent-bar .sign-y{ font-size:20px; white-space:normal; }
+ .fin .agent-wrap{ position:relative; right:auto; bottom:auto; height:240px; align-self:center; margin-top:-34px; } .with-sign,.flagbox{ min-height:0; padding:0 16px 18px; } .sign-btn{ font-size:16px; } .sign-btn b{ font-size:19px; } .photo-band{ height:150px; margin:-24px -16px 18px; border-radius:24px 24px 0 0; }
  .card h2{ font-size:25px; gap:8px; } .card h2 i{ flex:0 0 26px; height:16px; } .card .sub-h{ font-size:19px; } .card p{ font-size:18px; }
  .aud{ grid-template-columns:repeat(2,1fr); gap:14px 0; } .aud div{ font-size:19px; } .aud div:nth-child(2){ border-left:0; } .ic3{ width:78px; }
  .feats,.chans,.fb{ grid-template-columns:1fr; }
@@ -310,10 +347,20 @@ dialog.pop[open]{ animation:popIn .35s cubic-bezier(.2,1.3,.4,1); }
  .team{ grid-template-columns:1fr; } .team-all p{ font-size:18px; }
  .shift-h{ font-size:24px; } .shift{ padding-right:54px; } .shift::before{ right:8px; width:30px; } .shift::after{ right:21px; } .shift li .k{ right:-54px; width:42px; height:42px; font-size:19px; } .shift li h3{ font-size:20px; } .shift li p{ font-size:17px; }
  .path ol{ grid-template-columns:repeat(3,1fr); gap:18px 6px; } .path .finish{ display:none; } .path li b{ font-size:16px; }
- .finale{ margin:0 12px; } .suit p{ font-size:21px; right:3%; width:52%; } .startline p{ font-size:22px; bottom:12%; }
  .safra{ height:170px; } .safra .s-tag{ right:12px; bottom:40px; font-size:16px; } .safra .s-tag img{ width:20px; } .safra .st-tag{ left:12px; top:12px; font-size:16px; } .safra .st-tag i{ width:22px; height:22px; }
 }
 @media print{ .js .rv{ opacity:1; transform:none; } }
+
+/* ball images and photo bands (urls live here, not inline) */
+.b-blue{ --ball:url("assets/ball_blue.png"); }
+.b-cyan{ --ball:url("assets/ball_cyan.png"); }
+.b-magenta{ --ball:url("assets/ball_magenta.png"); }
+.b-navy{ --ball:url("assets/ball_navy.png"); }
+.b-orange{ --ball:url("assets/ball_orange.png"); }
+.b-red{ --ball:url("assets/ball_red.png"); }
+.img-bridge{ --img:url("assets/bg_bridge_road.jpg"); }
+.img-admin{ --img:url("assets/ic_admin.jpg"); }
+.pop-ov[hidden]{ display:none; }
 </style>
 </head>
 <body>
@@ -323,162 +370,147 @@ dialog.pop[open]{ animation:popIn .35s cubic-bezier(.2,1.3,.4,1); }
 
 <!-- ============ מסך 1 – פתיחה ============ -->
 <header class="hdr">
- <div class="prog"><img alt="לוגו התוכנית מאפס ל-106 – ב-6 תחנות" src="assets/logo_maefes_1.png"/></div>
- <div class="partners"><img alt="לוגו עיריית ירושלים" src="assets/logo_jerusalem_crop.png"/><span class="sep"></span><img alt="לוגו מוקד 106" src="assets/logo_moked106_crop.png"/></div>
+ <div class="prog"><img alt="לוגו התוכנית מאפס ל-106 – ב-6 תחנות" src="assets/logo_maefes_1.png"></div>
+ <div class="partners"><img alt="לוגו עיריית ירושלים" src="assets/logo_jerusalem_crop.png"><span class="sep"></span><img alt="לוגו מוקד 106" src="assets/logo_moked106_crop.png"></div>
 </header>
 
 <section class="hero1">
  <div class="ph" role="img" aria-label="כביש מרוץ למרגלות חומות העיר העתיקה, ירושלים"></div>
  <div class="tag"><span>ברוכים הבאים</span></div>
- <h1 class="title"><img alt="מאפס ל־106 – מחממים מנועים" src="assets/title_sign.png"/></h1>
+ <h1 class="title"><img alt="מאפס ל־106 – מחממים מנועים" src="assets/title_sign.png"></h1>
  <div class="txt">
-  <p class="lead">איזה כיף שהצטרפתם אלינו.<br/>עוד רגע נפגשים על <b>קו הזינוק</b><br/>ויש הרבה לגלות…</p>
-  <div class="rainbow"></div>
-  <p>הכנו לכם היכרות קצרה עם המוקד העירוני שעובד ללא הפסקה – 24/7: מי אנחנו, מה קורה כאן, מי יהיה לצידכם ואיך תיראה הדרך שלכם לתפקיד.</p>
+  <p class="lead">איזה כיף שהצטרפתם אלינו.<br>עוד רגע נפגשים על <b>קו הזינוק</b><br>ויש הרבה לגלות…</p>
+  
+  <p>הכנו לכם היכרות קצרה עם המוקד העירוני שעובד <br>ללא הפסקה – 24/7: מי אנחנו, מה קורה כאן, מי יהיה לצידכם ואיך תיראה הדרך שלכם לתפקיד.</p>
   <p class="go">בואו נכיר מקרוב.</p>
-  <a class="start" href="#ch1"><span>הזינוק לפניך <img alt="" aria-hidden="true" src="assets/finish_flag_white.png"/></span></a>
+  <a class="start" href="#ch1"><span>הזינוק לפניך <img alt="" aria-hidden="true" src="assets/finish_flag_white.png"></span></a>
  </div>
 </section>
 
 <!-- ============ מסך 2 – מתחילים להכיר ============ -->
 <section class="card rv" id="ch1"><span class="st-badge"><span>תחנה 1 מתוך 6</span></span>
- <h2><i></i><span>לפני שעולים לקו הזינוק, מתחילים להכיר</span><i></i></h2>
- <p class="c">מוקד עירוני הוא מרכז השירות של ירושלים. כאן פוגשים את העיר כמו שהיא באמת: אנשים, שאלות, מצבים וסיפורים שמשתנים מרגע לרגע.</p>
+ <header class="ch-head"><div class="ch-txt"><h2><i></i><span>לפני שעולים לקו הזינוק, מתחילים להכיר</span><i></i></h2></div><div class="ch-img img-p3" role="img" aria-label="הרכבת הקלה ברחוב יפו, ירושלים"></div></header>
+ <p class="c">מוקד עירוני הוא מרכז השירות של ירושלים. כאן פוגשים את העיר כמו שהיא באמת: <br>אנשים, שאלות, מצבים וסיפורים שמשתנים מרגע לרגע.</p>
  <p class="c">במהלך הדרך שלכם במוקד תפגשו</p>
  <div class="aud">
-  <div><img alt="" aria-hidden="true" class="ic3" src="assets/ic_house.png"/>תושבים ותושבות</div>
-  <div><img alt="" aria-hidden="true" class="ic3" src="assets/ic_brief.png"/>בעלי עסקים</div>
-  <div><img alt="" aria-hidden="true" class="ic3" src="assets/ic_camera.png"/>מבקרים</div>
-  <div><img alt="" aria-hidden="true" class="ic3" src="assets/ic_pin.png"/>תיירים</div>
+  <div><img alt="" aria-hidden="true" class="ic3" src="assets/ic_house.png">תושבים ותושבות</div>
+  <div><img alt="" aria-hidden="true" class="ic3" src="assets/ic_brief.png">בעלי עסקים</div>
+  <div><img alt="" aria-hidden="true" class="ic3" src="assets/ic_camera.png">מבקרים</div>
+  <div><img alt="" aria-hidden="true" class="ic3" src="assets/ic_pin.png">תיירים</div>
  </div>
- <p class="c">– כל מי שזקוק למידע, הכוונה או סיוע.</p>
- <img alt="" aria-hidden="true" class="sky" src="assets/skyline.png"/>
- <div class="feats">
+ <p class="c">&nbsp;כל מי שזקוק למידע, הכוונה או סיוע.</p>
+ 
+ <p style="font-weight: 800; color: rgb(11, 45, 98)">זהו הצעד הראשון שלכם, לפני נקודת הזינוק: <span style="font-weight: normal">להכיר את המוקד, את הקצב ואת האנשים, <br>ויחד לצאת למרוץ ולתת את השירות המקצועי והטוב ביותר.</span><br><span style="color: var(--blue)">אנחנו כאן כדי ללוות, ללמד ולעזור לכם להרגיש חלק – כבר מהשיחה הראשונה.</span></p><div class="feats">
   <div class="feat" style="--c:#1b9be0"><h3>ירושלים מכל הזוויות</h3><p>ירושלים מגיעה למוקד דרך אנשים, שאלות ומגוון סיפורים.</p></div>
   <div class="feat" style="--c:#e6007e"><h3>קצב משתנה</h3><p>יש רגעים שקטים ויש רגעים אינטנסיביים, וכל יום נראה קצת אחרת.</p></div>
-  <div class="feat" style="--c:#ff8a00"><h3>השפעה אמיתית</h3><p>גם מענה קצר ומדויק יכול לשנות את החוויה של האזרח בעיר.</p></div>
+  <div class="feat" style="--c:#ff8a00"><h3>השפעה אמיתית</h3><p style="width: 187px; height: 85px">גם מענה קצר ומדויק יכול לשנות את החוויה של האזרח בעיר.</p></div>
  </div>
- <div class="fin with-sign"><div class="agent-wrap"><img alt="נציגת המוקד מחזיקה שלט" src="assets/%D7%A0%D7%A6%D7%99%D7%92%D7%AA%20%D7%A9%D7%99%D7%A8%D7%95%D7%AA%20%D7%9E%D7%97%D7%96%D7%99%D7%A7%D7%94%20%D7%A9%D7%9C%D7%98%20%D7%9C%D7%91%D7%9F.png"/><button class="sign-btn" type="button" data-pop="pop-2" aria-haspopup="dialog"><b>אל דאגה!</b>לחצו עלי להרחבה</button></div><p>זהו הצעד הראשון שלכם, לפני נקודת הזינוק: להכיר את המוקד, את הקצב ואת האנשים, ויחד לצאת למרוץ ולתת את השירות המקצועי והטוב ביותר.<br/><span style="color:var(--blue)">אנחנו כאן כדי ללוות, ללמד ולעזור לכם להרגיש חלק – כבר מהשיחה הראשונה.</span></p></div>
- <a class="next" href="#ch2"><span>לתחנה הבאה: <b>מוקד 106</b><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M11 4h2v12l5-5 1.4 1.4L12 19.8l-7.4-7.4L6 11l5 5V4Z"/></svg></span></a>
+ 
+ 
+ <div class="agent-bar"><div class="who"><img alt="נציגת המוקד מחזיקה שלט" src="assets/נציגת%20שירות%20מחזיקה%20שלט%20לבן.png"><button class="sign-btn" type="button" data-pop="pop-2" aria-haspopup="dialog">לחצו עלי<br>להרחבה</button></div><span class="sign-y"><span>לפני שעולים לקו הזינוק</span></span></div>
 </section>
 
-<dialog class="pop" id="pop-2" aria-labelledby="pop-2-h"><div class="pop-in">
+<div class="pop-ov" id="pop-2" hidden><div class="pop" role="dialog" aria-modal="true" aria-labelledby="pop-2-h"><div class="pop-in">
  <h3 id="pop-2-h"><span>אל דאגה!</span></h3>
  <p><b>כמו כל צוות מרוץ, כך גם אתם – מקבלים הכנה.</b></p>
  <p>לא מצופה מכם לדעת הכול ביום הראשון. תהליך ההכשרה בנוי בצורה הדרגתית. אנחנו נתרגל יחד ונעניק לכם את כל הכלים והביטחון לפני שתוזנקו לדרך עצמאית על הקו.</p>
- <button class="pop-ok" type="button"><span>הבנתי, ממשיכים!</span></button>
-</div></dialog>
+ <button class="pop-ok" type="button" data-close=""><span>הבנתי, ממשיכים!</span></button>
+</div></div></div>
 
 <!-- ============ מסך 3 – המקום שבו העיר והאזרחים נפגשים ============ -->
-<div class="conn" aria-hidden="true"></div>
-<section class="card rv" id="ch2"><span class="st-badge"><span>תחנה 2 מתוך 6</span></span>
- <div class="photo-band" style="--img:url('assets/bg_bridge_road.jpg')" role="img" aria-label="גשר המיתרים בירושלים"></div>
- <h2><i></i><span>מוקד 106</span><i></i></h2>
- <p class="sub-h">המקום שבו העיר והאזרחים – נפגשים</p>
- <div class="route" aria-label="מפת המסלול של פנייה">
-  <div class="stops">
-   <div class="stop"><div class="pin gl" style="--c:#1b5aab;--c2:#4fa3ff;--ball:url('assets/ball_blue.png')"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0 2c-4.4 0-9 2.2-9 5.5V22h18v-2.5c0-3.3-4.6-5.5-9-5.5Z"/></svg></div><div><h3>פניית תושב</h3></div></div>
-   <div class="link" aria-hidden="true"><span class="cap">שיחה / דיווח</span><span class="track"><i class="packet"></i></span></div>
-   <div class="stop"><div class="pin gl" style="--c:#e0243a;--c2:#ff7a86;--ball:url('assets/ball_magenta.png')"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a9 9 0 0 0-9 9v5a3 3 0 0 0 3 3h2v-7H5v-1a7 7 0 0 1 14 0v1h-3v7h3v1h-5v2h5a2 2 0 0 0 2-2v-9a9 9 0 0 0-9-9Z"/></svg></div><div><h3>מוקד 106</h3><p>הבנה, סיווג ותיעוד</p></div></div>
-   <div class="link" aria-hidden="true"><span class="cap">העברה לטיפול</span><span class="track"><i class="packet"></i></span></div>
-   <div class="stop"><div class="pin gl" style="--c:#2e9e3e;--c2:#7fdc6e;--ball:url('assets/ball_orange.png')"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 2 7v2h20V7L12 2ZM4 11v7h3v-7H4Zm6.5 0v7h3v-7h-3ZM17 11v7h3v-7h-3ZM2 20v2h20v-2H2Z"/></svg></div><div><h3>הגורם המטפל בעירייה</h3></div></div>
-  </div>
- </div>
- <p class="c">המוקד הוא הכתובת המרכזית והראשונה לכל אזרח ואזרחית, לקבלת מידע ולדיווח על נושאים שונים הקשורים לעיר ולמרחב הציבורי. על מנת לתת מענה מקצועי, אנחנו פועלים בשני ערוצים מרכזיים ומקיפים:</p>
- <div class="chans">
-  <div class="chan" style="--c:#e0243a"><h3><span class="dot gl" style="--ball:url('assets/ball_red.png')"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 1 21h22L12 2Zm1 15h-2v-2h2v2Zm0-4h-2V9h2v4Z"/></svg></span>פניות ודיווחים</h3>
-   <ul><li>מפגעי ניקיון ותברואה</li><li>תקלות תאורה</li><li>בטיחות בדרכים</li><li>תקלות במרחב הציבורי</li></ul></div>
-  <div class="chan" style="--c:#1b5aab"><h3><span class="dot gl" style="--ball:url('assets/ball_blue.png')"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm1 15h-2v-6h2v6Zm0-8h-2V7h2v2Z"/></svg></span>ערוץ מידע</h3>
-   <ul><li>מידע על כתובות, דרכי התקשרות ושעות פעילות של מחלקות בעירייה</li><li>אירועים ותרבות</li><li>חסימות כבישים</li></ul></div>
- </div>
- <div class="fin flagbox"><div class="agent-wrap"><img alt="נציגת המוקד מניפה דגל מרוץ" src="assets/%D7%90%D7%99%D7%A9%D7%94%20%D7%9E%D7%A0%D7%99%D7%A4%D7%94%20%D7%93%D7%92%D7%9C%20%D7%9E%D7%99%D7%A8%D7%95%D7%A5%20%D7%91%D7%97%D7%92%D7%99%D7%92%D7%94.png"/><button class="flag-btn" type="button" data-pop="pop-3" aria-haspopup="dialog">לחצו עלי<br/>להרחבה</button></div><span class="sign-y"><span>הסוד של שיחה טובה</span></span></div>
- <a class="next" href="#ch3"><span>לתחנה הבאה: <b>תדר 106</b><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M11 4h2v12l5-5 1.4 1.4L12 19.8l-7.4-7.4L6 11l5 5V4Z"/></svg></span></a>
-</section>
-<dialog class="pop" id="pop-3" aria-labelledby="pop-3-h"><div class="pop-in">
+
+
+<div class="pop-ov" id="pop-3" hidden><div class="pop" role="dialog" aria-modal="true" aria-labelledby="pop-3-h"><div class="pop-in">
  <h3 id="pop-3-h"><span>מורידים הילוך</span></h3>
  <p>בכל שיחה עלינו להוריד הילוך, כי המטרה היא <b>"לזקק" את הצורך של התושב</b>: להקשיב, לשאול את השאלות הנכונות ולהוביל את הפנייה עד למענה המדויק ביותר.</p>
- <button class="pop-ok" type="button"><span>הבנתי, ממשיכים!</span></button>
-</div></dialog>
+ <button class="pop-ok" type="button" data-close=""><span>הבנתי, ממשיכים!</span></button>
+</div></div></div>
 
 <!-- ============ מסך 4 – תדר 106 ============ -->
-<div class="conn" aria-hidden="true"></div>
+<section class="card rv" id="ch2"><span class="st-badge"><span>תחנה 2 מתוך 6</span></span>
+ <header class="ch-head"><div class="ch-txt"><h2><i></i><span>מוקד 106</span><i></i></h2><p class="sub-h">המקום שבו העיר והאזרחים – נפגשים</p></div><div class="ch-img img-bridge" role="img" aria-label="גשר המיתרים בירושלים"></div></header>
+ <div class="route" aria-label="מפת המסלול של פנייה">
+  <div class="stops">
+   <div class="stop"><div class="pin gl b-blue" style="--c:#1b5aab;--c2:#4fa3ff"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0 2c-4.4 0-9 2.2-9 5.5V22h18v-2.5c0-3.3-4.6-5.5-9-5.5Z"></path></svg></div><div><h3>פניית תושב</h3></div></div>
+   <div class="link" aria-hidden="true"><span class="cap">שיחה / דיווח</span><span class="track"><i class="packet"></i></span></div>
+   <div class="stop"><div class="pin gl b-magenta" style="--c:#e0243a;--c2:#ff7a86"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a9 9 0 0 0-9 9v5a3 3 0 0 0 3 3h2v-7H5v-1a7 7 0 0 1 14 0v1h-3v7h3v1h-5v2h5a2 2 0 0 0 2-2v-9a9 9 0 0 0-9-9Z"></path></svg></div><div><h3>מוקד 106</h3><p>הבנה, סיווג ותיעוד</p></div></div>
+   <div class="link" aria-hidden="true"><span class="cap">העברה לטיפול</span><span class="track"><i class="packet"></i></span></div>
+   <div class="stop"><div class="pin gl b-orange" style="--c:#2e9e3e;--c2:#7fdc6e"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 2 7v2h20V7L12 2ZM4 11v7h3v-7H4Zm6.5 0v7h3v-7h-3ZM17 11v7h3v-7h-3ZM2 20v2h20v-2H2Z"></path></svg></div><div><h3>הגורם המטפל בעירייה</h3></div></div>
+  </div>
+ </div>
+ <p class="c">המוקד הוא הכתובת המרכזית והראשונה לכל אזרח ואזרחית, לקבלת מידע ולדיווח על נושאים שונים הקשורים לעיר ולמרחב הציבורי. על מנת לתת מענה מקצועי, אנחנו פועלים <b>בשני ערוצים מרכזיים ומקיפים:</b></p>
+ <div class="chans">
+  <div class="chan" style="--c:#e0243a"><h3><span class="dot gl b-red"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 1 21h22L12 2Zm1 15h-2v-2h2v2Zm0-4h-2V9h2v4Z"></path></svg></span>פניות ודיווחים</h3>
+   <ul><li>מפגעי ניקיון ותברואה</li><li>תקלות תאורה</li><li>בטיחות בדרכים</li><li>תקלות במרחב הציבורי</li></ul></div>
+  <div class="chan" style="--c:#1b5aab"><h3><span class="dot gl b-blue"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm1 15h-2v-6h2v6Zm0-8h-2V7h2v2Z"></path></svg></span>ערוץ מידע</h3>
+   <ul><li>מידע על כתובות, דרכי התקשרות ושעות פעילות של מחלקות בעירייה</li><li>אירועים ותרבות</li><li>חסימות כבישים</li></ul></div>
+ </div>
+ <div class="agent-bar"><div class="who"><img alt="נציגת המוקד מניפה דגל מרוץ" src="assets/אישה%20מניפה%20דגל%20מירוץ%20בחגיגה.png"></div><span class="sign-y"><span>הסוד של שיחה טובה</span></span><button class="more-btn" type="button" data-pop="pop-3" aria-haspopup="dialog">לחצו עלי להרחבה<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15.4 5.4 9.8 11l-1.4 1 1.4 1 5.6 5.6 1.4-1.4L11.6 12l5.2-5.2-1.4-1.4Z"></path></svg></button></div>
+ 
+</section>
 <section class="card rv" id="ch3"><span class="st-badge"><span>תחנה 3 מתוך 6</span></span>
- <div class="photo-band safra" role="img" aria-label="כיכר ספרא, ירושלים – כאן נמצא המוקד"><span class="st-tag"><i></i>הזנק / סיום</span><span class="s-tag"><img alt="" aria-hidden="true" src="assets/pin_red.png"/>כיכר ספרא – כאן נמצא המוקד</span></div>
- <h2><i></i><span>תדר 106 – הדרך שלנו לשדר שירות</span><i></i></h2>
+ <header class="ch-head"><div class="ch-txt"><h2><i></i><span>תדר 106 – הדרך שלנו לשדר שירות</span><i></i></h2></div><div class="ch-img safra" role="img" aria-label="כיכר ספרא, ירושלים – כאן נמצא המוקד"><span class="st-tag"><i></i>הזנק / סיום</span><span class="s-tag"><img alt="" aria-hidden="true" src="assets/pin_red.png">כיכר ספרא – כאן נמצא המוקד</span></div></header>
  <p class="c">עבור האזרחים, אנחנו <b>הפנים והלב של השירות העירוני</b>. במוקד העירוני מעניקים שירות מותאם ורגיש לקהל המגוון של ירושלים, בשפות שונות ובהתאמה לאנשים עם מוגבלויות.</p>
  <p class="c">חוויית השירות של כל אחת ואחד מהאזרחים מתחילה ומסתיימת בדרך שבה נוביל את השיחה. לכן אנחנו פועלים לפי שלושה עקרונות:</p>
  <ol class="prin">
-  <li><div class="ic gl" style="--c:#0a52d6;--c2:#58a8ff;--ball:url('assets/ball_blue.png')"><span class="num">1</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 2 .7 3.3 1.6 4.4.8 1 1.4 1.7 1.4 3.1A4.5 4.5 0 0 0 12.5 21c2 0 3.5-1.2 4.1-2.9l-1.9-.7c-.3.9-1.1 1.6-2.2 1.6A2.5 2.5 0 0 1 10 16.5c0-2.1-1-3.3-1.9-4.4C7.4 11.3 7 10.5 7 9a5 5 0 0 1 10 0h2a7 7 0 0 0-7-7Zm0 4a3 3 0 0 0-3 3h2a1 1 0 0 1 2 0c0 .6-.3.9-.9 1.4-.6.5-1.1 1.2-1.1 2.6h2c0-.6.3-.9.9-1.4.6-.5 1.1-1.2 1.1-2.6a3 3 0 0 0-3-3Z"/></svg></div><h3>להקשיב</h3><p>לתת לתושב מקום לבטא את צרכיו.</p></li>
-  <li><div class="ic gl" style="--c:#d1007a;--c2:#ff6ec4;--ball:url('assets/ball_magenta.png')"><span class="num">2</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 2a8 8 0 0 1 6.3 12.9l5.4 5.4-1.4 1.4-5.4-5.4A8 8 0 1 1 10 2Zm0 2a6 6 0 1 0 0 12 6 6 0 0 0 0-12Zm-.2 8.6h1.6V14H9.8v-1.4Zm.8-7.4c1.6 0 2.8 1 2.8 2.4 0 1.2-.7 1.8-1.3 2.2-.5.3-.7.5-.7 1v.3H9.8v-.4c0-1.1.6-1.6 1.1-1.9.5-.3.8-.5.8-1.1 0-.6-.5-1-1.1-1-.7 0-1.1.4-1.2 1.1L7.8 7.5c.2-1.4 1.3-2.3 2.8-2.3Z"/></svg></div><h3>להבין</h3><p>לזהות את הצורך המדויק באמצעות שאלות מקצועיות.</p></li>
-  <li><div class="ic gl" style="--c:#f05a00;--c2:#ffb347;--ball:url('assets/ball_orange.png')"><span class="num">3</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21.7 9.3 19 6.6V3h-2.6l-1.4-1.4L12 4.6 9 1.6 7.6 3H5v3.6L2.3 9.3 4 11l-1 1 4.5 4.5L9 18l3 3 3-3 1.5-1.5L21 12l-1-1 1.7-1.7ZM12 18.2 6 12.2l1.4-1.4L10 13.4l6.6-6.6L18 8.2l-6 6v4Z"/></svg></div><h3>לסייע</h3><p>לפתוח פנייה, לתת מידע או לכוון ליעד הנכון.</p></li>
+  <li><div class="ic gl b-blue" style="--c:#0a52d6;--c2:#58a8ff"><span class="num">1</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 2 .7 3.3 1.6 4.4.8 1 1.4 1.7 1.4 3.1A4.5 4.5 0 0 0 12.5 21c2 0 3.5-1.2 4.1-2.9l-1.9-.7c-.3.9-1.1 1.6-2.2 1.6A2.5 2.5 0 0 1 10 16.5c0-2.1-1-3.3-1.9-4.4C7.4 11.3 7 10.5 7 9a5 5 0 0 1 10 0h2a7 7 0 0 0-7-7Zm0 4a3 3 0 0 0-3 3h2a1 1 0 0 1 2 0c0 .6-.3.9-.9 1.4-.6.5-1.1 1.2-1.1 2.6h2c0-.6.3-.9.9-1.4.6-.5 1.1-1.2 1.1-2.6a3 3 0 0 0-3-3Z"></path></svg></div><h3>להקשיב</h3><p>לתת לתושב מקום לבטא את צרכיו.</p></li>
+  <li><div class="ic gl b-magenta" style="--c:#d1007a;--c2:#ff6ec4"><span class="num">2</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 2a8 8 0 0 1 6.3 12.9l5.4 5.4-1.4 1.4-5.4-5.4A8 8 0 1 1 10 2Zm0 2a6 6 0 1 0 0 12 6 6 0 0 0 0-12Zm-.2 8.6h1.6V14H9.8v-1.4Zm.8-7.4c1.6 0 2.8 1 2.8 2.4 0 1.2-.7 1.8-1.3 2.2-.5.3-.7.5-.7 1v.3H9.8v-.4c0-1.1.6-1.6 1.1-1.9.5-.3.8-.5.8-1.1 0-.6-.5-1-1.1-1-.7 0-1.1.4-1.2 1.1L7.8 7.5c.2-1.4 1.3-2.3 2.8-2.3Z"></path></svg></div><h3>להבין</h3><p>לזהות את הצורך המדויק באמצעות שאלות מקצועיות.</p></li>
+  <li><div class="ic gl b-orange" style="--c:#f05a00;--c2:#ffb347"><span class="num">3</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21.7 9.3 19 6.6V3h-2.6l-1.4-1.4L12 4.6 9 1.6 7.6 3H5v3.6L2.3 9.3 4 11l-1 1 4.5 4.5L9 18l3 3 3-3 1.5-1.5L21 12l-1-1 1.7-1.7ZM12 18.2 6 12.2l1.4-1.4L10 13.4l6.6-6.6L18 8.2l-6 6v4Z"></path></svg></div><h3>לסייע</h3><p>לפתוח פנייה, לתת מידע או לכוון ליעד הנכון.</p></li>
  </ol>
- <div class="value"><span class="heart gl" style="--c:#e0243a;--ball:url('assets/ball_red.png')"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7.5-4.6-9.6-9.3C.9 8.3 3 4.5 6.7 4.5c2.1 0 3.6 1.1 4.3 2.4h2c.7-1.3 2.2-2.4 4.3-2.4 3.7 0 5.8 3.8 4.3 7.2C19.5 16.4 12 21 12 21Z"/></svg></span><p><small>הערך שמוביל אותנו</small>שירות מכבד ומותאם לכל אדם</p></div>
+ <div class="value"><span class="heart gl b-red" style="--c:#e0243a"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7.5-4.6-9.6-9.3C.9 8.3 3 4.5 6.7 4.5c2.1 0 3.6 1.1 4.3 2.4h2c.7-1.3 2.2-2.4 4.3-2.4 3.7 0 5.8 3.8 4.3 7.2C19.5 16.4 12 21 12 21Z"></path></svg></span><p><small>הערך שמוביל אותנו</small>שירות מכבד ומותאם לכל אדם</p></div>
 
- <section class="tb"><img alt="" aria-hidden="true" class="deco flag" src="assets/flag.png"/>
- <button class="pop-btn" type="button" data-pop="pop-4" aria-haspopup="dialog"><span class="sign"><span>שירות טוב מתחיל ברצון לעזור</span></span><img alt="לחצו עלי" class="go" src="assets/btn_click.png"/></button>
+ <div class="agent-bar"><div class="who"><img alt="נציגת המוקד מחזיקה שלט" src="assets/נציגת%20שירות%20מחזיקה%20שלט%20לבן.png"><button class="sign-btn" type="button" data-pop="pop-4" aria-haspopup="dialog">לחצו עלי<br>להרחבה</button></div><span class="sign-y"><span>שירות טוב מתחיל ברצון לעזור</span></span></div>
 </section>
- <a class="next" href="#ch4"><span>לתחנה הבאה: <b>החוליה המקשרת</b><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M11 4h2v12l5-5 1.4 1.4L12 19.8l-7.4-7.4L6 11l5 5V4Z"/></svg></span></a>
-</section>
-<dialog class="pop" id="pop-4" aria-labelledby="pop-4-h"><div class="pop-in">
+<div class="pop-ov" id="pop-4" hidden><div class="pop" role="dialog" aria-modal="true" aria-labelledby="pop-4-h"><div class="pop-in">
  <h3 id="pop-4-h"><span>אנחנו 'מגדילים ראש'</span></h3>
  <p>גם אם פנו אלינו בנושא שאינו באחריות העירייה – נספק את המידע או נכוון את התושב.</p>
  <p><b>שירות טוב מתחיל ברצון לעזור!</b></p>
- <button class="pop-ok" type="button"><span>הבנתי, ממשיכים!</span></button>
-</div></dialog>
+ <button class="pop-ok" type="button" data-close=""><span>הבנתי, ממשיכים!</span></button>
+</div></div></div>
 
 <!-- ============ מסך 5 – מבנה העירייה ============ -->
-<div class="conn" aria-hidden="true"></div>
 <section class="card rv" id="ch4"><span class="st-badge"><span>תחנה 4 מתוך 6</span></span>
- <div class="photo-band" style="--img:url('assets/ic_admin.jpg')" role="img" aria-label="רחוב בירושלים עם הרכבת הקלה"></div>
- <h2><i></i><span>מוקד 106 הוא החוליה המקשרת</span><i></i></h2>
+ <header class="ch-head"><div class="ch-txt"><h2><i></i><span>מוקד 106 הוא החוליה המקשרת</span><i></i></h2></div><div class="ch-img img-p6" role="img" aria-label="טחנת הרוח במשכנות שאננים, ירושלים"></div></header>
  <p class="c">עיריית ירושלים היא ארגון רחב ומגוון, המעניק שירות למאות אלפי אזרחים.</p>
- <div class="stats">
-  <div class="stat"><div class="n"><small>כ־</small>10</div><div class="l">מינהלים</div></div>
-  <div class="stat"><div class="n">עשרות</div><div class="l">אגפים מקצועיים</div></div>
-  <div class="stat"><div class="n">מאות</div><div class="l">מחלקות ונפות בשטח</div></div>
+ <div class="ring-map">
+  <div class="rings" aria-label="המיקום של המוקד בעירייה">
+   <div class="ring r1"><span class="rl">עיריית ירושלים</span>
+    <div class="ring r2"><span class="rl">מינהל התפעול</span>
+     <div class="ring r3"><img alt="" aria-hidden="true" src="assets/ic_106.jpg"><b>מוקד 106</b><span class="here2"><img alt="" aria-hidden="true" src="assets/pin_red.png">אתם כאן</span></div>
+    </div>
+   </div>
+  </div>
+  <div class="gauges">
+   <div class="gauge-card"><svg viewBox="0 0 120 70" aria-hidden="true"><path d="M12 62a48 48 0 0 1 96 0" fill="none" stroke="rgba(255,255,255,.22)" stroke-width="12" stroke-linecap="round"></path><path d="M12 62a48 48 0 0 1 96 0" fill="none" stroke="#ffc81f" stroke-width="12" stroke-linecap="round" pathLength="100" stroke-dasharray="25 100"></path><line x1="60" y1="62" x2="60" y2="24" stroke="#fff" stroke-width="4" stroke-linecap="round" transform="rotate(-45 60 62)"></line><circle cx="60" cy="62" r="7" fill="#e0243a" stroke="#fff" stroke-width="3"></circle></svg><div><div class="n"><small>כ־</small>10</div><div class="l">מינהלים</div></div></div>
+   <div class="gauge-card"><svg viewBox="0 0 120 70" aria-hidden="true"><path d="M12 62a48 48 0 0 1 96 0" fill="none" stroke="rgba(255,255,255,.22)" stroke-width="12" stroke-linecap="round"></path><path d="M12 62a48 48 0 0 1 96 0" fill="none" stroke="#ffc81f" stroke-width="12" stroke-linecap="round" pathLength="100" stroke-dasharray="60 100"></path><line x1="60" y1="62" x2="60" y2="24" stroke="#fff" stroke-width="4" stroke-linecap="round" transform="rotate(18 60 62)"></line><circle cx="60" cy="62" r="7" fill="#e0243a" stroke="#fff" stroke-width="3"></circle></svg><div><div class="n">עשרות</div><div class="l">אגפים מקצועיים</div></div></div>
+   <div class="gauge-card"><svg viewBox="0 0 120 70" aria-hidden="true"><path d="M12 62a48 48 0 0 1 96 0" fill="none" stroke="rgba(255,255,255,.22)" stroke-width="12" stroke-linecap="round"></path><path d="M12 62a48 48 0 0 1 96 0" fill="none" stroke="#ffc81f" stroke-width="12" stroke-linecap="round" pathLength="100" stroke-dasharray="95 100"></path><line x1="60" y1="62" x2="60" y2="24" stroke="#fff" stroke-width="4" stroke-linecap="round" transform="rotate(81 60 62)"></line><circle cx="60" cy="62" r="7" fill="#e0243a" stroke="#fff" stroke-width="3"></circle></svg><div><div class="n">מאות</div><div class="l">מחלקות ונפות בשטח</div></div></div>
+  </div>
  </div>
- <div class="org" aria-label="המיקום של המוקד בעירייה">
-  <div class="lvl"><img alt="" aria-hidden="true" src="assets/ic_city.jpg"/><b>עיריית ירושלים</b></div>
-  <span class="link" aria-hidden="true"></span>
-  <div class="lvl"><img alt="" aria-hidden="true" src="assets/ic_admin.jpg"/><b>מינהל התפעול</b></div>
-  <span class="link" aria-hidden="true"></span>
-  <div class="lvl me"><img alt="" aria-hidden="true" src="assets/ic_106.jpg"/><b>מוקד 106</b><span class="here"><img alt="" aria-hidden="true" src="assets/pin_red.png"/>אתם כאן</span></div>
- </div>
- <div class="mid-note">
-  <h3>אנחנו ה"עיניים" של העיר</h3>
-  <p>המוקד משויך למינהל התפעול. אנו עובדים מול מאות המחלקות והיחידות העירוניות כדי לשמור על שגרת חיים תקינה ובטוחה.</p>
- </div>
-
- <section class="tb">
- <div class="tb-row"><span class="sign"><span>מול מי אנחנו עובדים?</span></span></div>
- <button class="note-btn" type="button" data-pop="pop-5" aria-haspopup="dialog"><img alt="" aria-hidden="true" src="assets/sticky.png"/><span>לחצו עלי<br/>להרחבה</span></button>
+ <div class="eyes"><span class="gl b-magenta"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4.5C7 4.5 2.7 7.6 1 12c1.7 4.4 6 7.5 11 7.5s9.3-3.1 11-7.5c-1.7-4.4-6-7.5-11-7.5Zm0 12.5a5 5 0 1 1 0-10 5 5 0 0 1 0 10Zm0-8a3 3 0 1 0 0 6 3 3 0 0 0 0-6Z"></path></svg></span><div><h3>אנחנו ה"עיניים" של העיר</h3><p>המוקד משויך למינהל התפעול. אנו עובדים מול מאות המחלקות והיחידות העירוניות כדי לשמור על שגרת חיים תקינה ובטוחה.</p></div></div>
+ <div class="agent-bar"><div class="who"><img alt="נציגת המוקד מניפה דגל מרוץ" src="assets/אישה%20מניפה%20דגל%20מירוץ%20בחגיגה.png"></div><span class="sign-y"><span>מול מי אנחנו עובדים?</span></span><button class="more-btn" type="button" data-pop="pop-5" aria-haspopup="dialog">לחצו עלי להרחבה<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15.4 5.4 9.8 11l-1.4 1 1.4 1 5.6 5.6 1.4-1.4L11.6 12l5.2-5.2-1.4-1.4Z"></path></svg></button></div>
 </section>
- <a class="next" href="#ch5"><span>לתחנה הבאה: <b>צוות המרוץ</b><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M11 4h2v12l5-5 1.4 1.4L12 19.8l-7.4-7.4L6 11l5 5V4Z"/></svg></span></a>
-</section>
-<dialog class="pop" id="pop-5" aria-labelledby="pop-5-h"><div class="pop-in">
+<div class="pop-ov" id="pop-5" hidden><div class="pop" role="dialog" aria-modal="true" aria-labelledby="pop-5-h"><div class="pop-in">
  <h3 id="pop-5-h"><span>השותפים שלנו למסלול</span></h3>
  <p>רוב עבודת המוקד מתבצעת מול אגפי מינהל התפעול, ובראשם אגפי <b>התברואה, שפ"ע ואכיפה</b>.</p>
  <p>המוקד מנתב את המידע להמשך טיפול – למחלקות השטח ולגורמי חוץ נוספים כמו: משטרה, חברת חשמל ועוד.</p>
- <button class="pop-ok" type="button"><span>הבנתי, ממשיכים!</span></button>
-</div></dialog>
+ <button class="pop-ok" type="button" data-close=""><span>הבנתי, ממשיכים!</span></button>
+</div></div></div>
 
 <!-- ============ מסך 6 – צוות המרוץ ============ -->
-<div class="conn" aria-hidden="true"></div>
 <section class="card rv" id="ch5"><span class="st-badge"><span>תחנה 5 מתוך 6</span></span>
- <h2><i></i><span>צוות המרוץ</span><i></i></h2>
- <p class="sub-h">מערך הא.נשים שלצידכם</p>
+ <header class="ch-head"><div class="ch-txt"><h2><i></i><span>צוות המרוץ</span><i></i></h2><p class="sub-h">מערך הא.נשים שלצידכם</p></div><div class="ch-img img-p5" role="img" aria-label="גן המפלצת בקריית היובל, ירושלים"></div></header>
  <p class="c">במוקד 106 אתם אף פעם לא לבד – לצידכם פועל צוות שלם.</p>
  <div class="team">
-  <div class="member" style="--c:#0b2d62"><span class="av gl" style="--ball:url('assets/ball_navy.png')"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2 2.4 4.9 5.4.8-3.9 3.8.9 5.4L12 14.4l-4.8 2.5.9-5.4-3.9-3.8 5.4-.8L12 2Zm-7 18h14v2H5v-2Z"/></svg></span><b>מנהל המוקד</b></div>
-  <div class="member" style="--c:#1b5aab"><span class="av gl" style="--ball:url('assets/ball_blue.png')"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0 2c-4.4 0-9 2.2-9 5.5V22h18v-2.5c0-3.3-4.6-5.5-9-5.5Z"/></svg></span><b>מנהלת מחלקה בכירה לשירות</b></div>
-  <div class="member" style="--c:#1b9be0"><span class="av gl" style="--ball:url('assets/ball_cyan.png')"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 1 9l11 6 9-4.9V17h2V9L12 3Zm-6 9.2V16c0 1.7 2.7 4 6 4s6-2.3 6-4v-3.8l-6 3.3-6-3.3Z"/></svg></span><b>מנהלת תחום קליטה והכשרה</b></div>
-  <div class="member" style="--c:#e6007e"><span class="av gl" style="--ball:url('assets/ball_magenta.png')"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6h-3V4a2 2 0 0 0-2-2H9a2 2 0 0 0-2 2v2H4a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2ZM9 4h6v2H9V4Zm4 11v2h-2v-2H9v-2h2v-2h2v2h2v2h-2Z"/></svg></span><b>מנהלת מחלקה בכירה לתפעול ולוגיסטיקה</b></div>
-  <div class="member" style="--c:#ff8a00"><span class="av gl" style="--ball:url('assets/ball_orange.png')"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4.5C7 4.5 2.7 7.6 1 12c1.7 4.4 6 7.5 11 7.5s9.3-3.1 11-7.5c-1.7-4.4-6-7.5-11-7.5Zm0 12.5a5 5 0 1 1 0-10 5 5 0 0 1 0 10Zm0-8a3 3 0 1 0 0 6 3 3 0 0 0 0-6Z"/></svg></span><b>מנהל תחום בכיר לבקרה</b></div>
-  <div class="member" style="--c:#e0243a"><span class="av gl" style="--ball:url('assets/ball_red.png')"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm0 18a8 8 0 1 1 0-16 8 8 0 0 1 0 16Zm.5-13H11v6l5.2 3.2.8-1.3-4.5-2.7V7Z"/></svg></span><b>אחמ"ש – אחראי/ת משמרת</b></div>
+  <div class="member" style="--c:#0b2d62"><span class="av gl b-navy"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2 2.4 4.9 5.4.8-3.9 3.8.9 5.4L12 14.4l-4.8 2.5.9-5.4-3.9-3.8 5.4-.8L12 2Zm-7 18h14v2H5v-2Z"></path></svg></span><b>מנהל המוקד</b></div>
+  <div class="member" style="--c:#1b5aab"><span class="av gl b-blue"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0 2c-4.4 0-9 2.2-9 5.5V22h18v-2.5c0-3.3-4.6-5.5-9-5.5Z"></path></svg></span><b>מנהלת מחלקה בכירה לשירות</b></div>
+  <div class="member" style="--c:#1b9be0"><span class="av gl b-cyan"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 1 9l11 6 9-4.9V17h2V9L12 3Zm-6 9.2V16c0 1.7 2.7 4 6 4s6-2.3 6-4v-3.8l-6 3.3-6-3.3Z"></path></svg></span><b>מנהלת תחום קליטה והכשרה</b></div>
+  <div class="member" style="--c:#e6007e"><span class="av gl b-magenta"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6h-3V4a2 2 0 0 0-2-2H9a2 2 0 0 0-2 2v2H4a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2ZM9 4h6v2H9V4Zm4 11v2h-2v-2H9v-2h2v-2h2v2h2v2h-2Z"></path></svg></span><b>מנהלת מחלקה בכירה לתפעול ולוגיסטיקה</b></div>
+  <div class="member" style="--c:#ff8a00"><span class="av gl b-orange"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4.5C7 4.5 2.7 7.6 1 12c1.7 4.4 6 7.5 11 7.5s9.3-3.1 11-7.5c-1.7-4.4-6-7.5-11-7.5Zm0 12.5a5 5 0 1 1 0-10 5 5 0 0 1 0 10Zm0-8a3 3 0 1 0 0 6 3 3 0 0 0 0-6Z"></path></svg></span><b>מנהל תחום בכיר לבקרה</b></div>
+  <div class="member" style="--c:#e0243a"><span class="av gl b-red"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm0 18a8 8 0 1 1 0-16 8 8 0 0 1 0 16Zm.5-13H11v6l5.2 3.2.8-1.3-4.5-2.7V7Z"></path></svg></span><b>אחמ"ש – אחראי/ת משמרת</b></div>
  </div>
- <div class="team-all"><img alt="" aria-hidden="true" src="assets/ic_106.jpg"/><p>וצוות המוקדנים והמוקדניות – החברים לעבודה.</p></div>
+ <div class="team-all"><img alt="" aria-hidden="true" src="assets/ic_106.jpg"><p>וצוות המוקדנים והמוקדניות – החברים לעבודה.</p></div>
 
- <h3 class="shift-h"><img alt="" aria-hidden="true" src="assets/flag.png"/>איך נראית המשמרת?</h3>
+ <h3 class="shift-h"><img alt="" aria-hidden="true" src="assets/flag.png">איך נראית המשמרת?</h3>
  <ol class="shift">
   <li><span class="k" style="--c:#1b9be0">1</span><h3>הגעה והתארגנות</h3><p>רישום ל"דף הפסקות": שווה להגיע מוקדם! הראשונים לחתום – יוצאים ראשונים להפסקה.</p></li>
   <li><span class="k" style="--c:#3fae49">2</span><h3>התחברות למערכות</h3><p>בהתאם לסידור העבודה – מחוברים למערכות ומוכנים לשיחה ראשונה.</p></li>
@@ -486,12 +518,9 @@ dialog.pop[open]{ animation:popIn .35s cubic-bezier(.2,1.3,.4,1); }
   <li><span class="k" style="--c:#e6007e">4</span><h3>תדריך</h3><p>מעבר על דגשים יומיים או זרקור על מידע חשוב.</p></li>
  </ol>
 
- <section class="tb"><img alt="" aria-hidden="true" class="deco" src="assets/helmet.png"/>
- <button class="pop-btn" type="button" data-pop="pop-6" aria-haspopup="dialog"><span class="sign"><span>אווירה טובה במוקד</span></span><img alt="לחצו עלי" class="go" src="assets/btn_click.png"/></button>
+ <div class="agent-bar"><div class="who"><img alt="נציגת המוקד מחזיקה שלט" src="assets/נציגת%20שירות%20מחזיקה%20שלט%20לבן.png"><button class="sign-btn" type="button" data-pop="pop-6" aria-haspopup="dialog">לחצו עלי<br>להרחבה</button></div><span class="sign-y"><span>אווירה טובה במוקד</span></span></div>
 </section>
- <a class="next" href="#ch6"><span>לתחנה הבאה: <b>אוטוטו בקו הזינוק</b><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M11 4h2v12l5-5 1.4 1.4L12 19.8l-7.4-7.4L6 11l5 5V4Z"/></svg></span></a>
-</section>
-<dialog class="pop" id="pop-6" aria-labelledby="pop-6-h"><div class="pop-in">
+<div class="pop-ov" id="pop-6" hidden><div class="pop" role="dialog" aria-modal="true" aria-labelledby="pop-6-h"><div class="pop-in">
  <h3 id="pop-6-h"><span>סביבת עבודה נעימה</span></h3>
  <p>אנחנו מאמינים שסביבת עבודה נעימה ואווירה טובה הן המפתח לשירות טוב:</p>
  <ul>
@@ -500,22 +529,21 @@ dialog.pop[open]{ animation:popIn .35s cubic-bezier(.2,1.3,.4,1); }
   <li>פעילויות גיבוש מגוונות</li>
   <li>התחשבות בסטודנטים – אנחנו יודעים שהלימודים חשובים לכם. לכן אנו מאפשרים יום חופש לפני מבחן וביום המבחן, כדי שתוכלו להצליח בראש שקט!</li>
  </ul>
- <button class="pop-ok" type="button"><span>הבנתי, ממשיכים!</span></button>
-</div></dialog>
+ <button class="pop-ok" type="button" data-close=""><span>הבנתי, ממשיכים!</span></button>
+</div></div></div>
 
 <!-- ============ מסך 7 – אוטוטו בקו הזינוק ============ -->
-<div class="conn" aria-hidden="true"></div>
 <section class="card rv" id="ch6"><span class="st-badge"><span>תחנה 6 מתוך 6</span></span>
- <h2><i></i><span>אוטוטו בקו הזינוק…</span><i></i></h2>
+ <header class="ch-head"><div class="ch-txt"><h2><i></i><span>אוטוטו בקו הזינוק…</span><i></i></h2></div><div class="ch-img img-p8" role="img" aria-label="גשר המיתרים בשקיעה, ירושלים"></div></header>
  <p class="c">רגע לפני היום הראשון, הכרתם את המוקד העירוני, את התפקיד שלו בחיבור בין התושבים לעירייה, את האנשים שילוו אתכם ואת מה שמחכה לכם בהמשך.</p>
  <p class="c">זה היה <b>שלב החימום הראשון</b> שלכם במסלול "מאפס ל־106", ואותו כבר אפשר לסמן כ<b style="color:var(--green)">הושלם</b>. מכאן, מסלול ההכשרה ימשיך בהדרגה, תחנה אחר תחנה, עד שתהיו מוכנים לעלות על קו הזינוק – קו הטלפון – בביטחון.</p>
 
  <h3 class="shift-h">המסלול שלכם מאפס ל־106</h3>
  <div class="path">
   <div class="road" aria-hidden="true"></div>
-  <img alt="" aria-hidden="true" class="finish" src="assets/flag.png"/>
+  <img alt="" aria-hidden="true" class="finish" src="assets/flag.png">
   <ol>
-   <li class="done"><div class="pt"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 16.2-4.2-4.2-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2Z"/></svg></div><b>היכרות</b><em>הושלם</em></li>
+   <li class="done"><div class="pt"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 16.2-4.2-4.2-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2Z"></path></svg></div><b>היכרות</b><em>הושלם</em></li>
    <li><div class="pt" style="--c:#1b9be0">2</div><b>מערכות העבודה</b></li>
    <li><div class="pt" style="--c:#3fae49">3</div><b>מפת העירייה, אגפים וממשקים</b></li>
    <li><div class="pt" style="--c:#ff8a00">4</div><b>תהליך העבודה מפנייה לסגירה</b></li>
@@ -529,9 +557,9 @@ dialog.pop[open]{ animation:popIn .35s cubic-bezier(.2,1.3,.4,1); }
  <div class="fb">
   <div class="fb-box">
    <div class="gauge" aria-hidden="true">
-    <svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="22" fill="#e0243a"/><circle cx="17" cy="19" r="3" fill="#fff"/><circle cx="31" cy="19" r="3" fill="#fff"/><path d="M15 35c4-5 14-5 18 0" stroke="#fff" stroke-width="3.5" fill="none" stroke-linecap="round"/></svg>
-    <svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="22" fill="#ffc81f"/><circle cx="17" cy="19" r="3" fill="#0b2340"/><circle cx="31" cy="19" r="3" fill="#0b2340"/><path d="M15 32h18" stroke="#0b2340" stroke-width="3.5" stroke-linecap="round"/></svg>
-    <svg class="on" viewBox="0 0 48 48"><circle cx="24" cy="24" r="22" fill="#3fae49"/><circle cx="17" cy="19" r="3" fill="#fff"/><circle cx="31" cy="19" r="3" fill="#fff"/><path d="M14 28c4 7 16 7 20 0" stroke="#fff" stroke-width="3.5" fill="none" stroke-linecap="round"/></svg>
+    <svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="22" fill="#e0243a"></circle><circle cx="17" cy="19" r="3" fill="#fff"></circle><circle cx="31" cy="19" r="3" fill="#fff"></circle><path d="M15 35c4-5 14-5 18 0" stroke="#fff" stroke-width="3.5" fill="none" stroke-linecap="round"></path></svg>
+    <svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="22" fill="#ffc81f"></circle><circle cx="17" cy="19" r="3" fill="#0b2340"></circle><circle cx="31" cy="19" r="3" fill="#0b2340"></circle><path d="M15 32h18" stroke="#0b2340" stroke-width="3.5" stroke-linecap="round"></path></svg>
+    <svg class="on" viewBox="0 0 48 48"><circle cx="24" cy="24" r="22" fill="#3fae49"></circle><circle cx="17" cy="19" r="3" fill="#fff"></circle><circle cx="31" cy="19" r="3" fill="#fff"></circle><path d="M14 28c4 7 16 7 20 0" stroke="#fff" stroke-width="3.5" fill="none" stroke-linecap="round"></path></svg>
    </div>
    <p>מערכת <b>"הסמיילי המחייך"</b> – הערכת נציגים תהיה לוח המחוונים האישי שלכם. וכשהסמיילי יחייך, הצופר יפעל וכולם יפרגנו.</p>
   </div>
@@ -540,12 +568,9 @@ dialog.pop[open]{ animation:popIn .35s cubic-bezier(.2,1.3,.4,1); }
   </div>
  </div>
 
- <section class="tb"><img alt="" aria-hidden="true" class="deco" src="assets/helmet.png"/>
- <button class="pop-btn" type="button" data-pop="pop-7" aria-haspopup="dialog"><span class="sign"><span>4 טיפים להתחלה טובה</span></span><img alt="לחצו עלי" class="go" src="assets/btn_click.png"/></button>
+ <div class="agent-bar"><div class="who"><img alt="נציגת המוקד מניפה דגל מרוץ" src="assets/אישה%20מניפה%20דגל%20מירוץ%20בחגיגה.png"></div><span class="sign-y"><span>4 טיפים להתחלה טובה</span></span><button class="more-btn" type="button" data-pop="pop-7" aria-haspopup="dialog">לחצו עלי להרחבה<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15.4 5.4 9.8 11l-1.4 1 1.4 1 5.6 5.6 1.4-1.4L11.6 12l5.2-5.2-1.4-1.4Z"></path></svg></button></div>
 </section>
- <a class="next" href="#finale"><span>ממשיכים <b>לקו הזינוק</b><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M11 4h2v12l5-5 1.4 1.4L12 19.8l-7.4-7.4L6 11l5 5V4Z"/></svg></span></a>
-</section>
-<dialog class="pop" id="pop-7" aria-labelledby="pop-7-h"><div class="pop-in">
+<div class="pop-ov" id="pop-7" hidden><div class="pop" role="dialog" aria-modal="true" aria-labelledby="pop-7-h"><div class="pop-in">
  <h3 id="pop-7-h"><span>4 טיפים להתחלה טובה</span></h3>
  <ul>
   <li>רשמו שאלות שעולות במהלך ההכשרה</li>
@@ -553,50 +578,35 @@ dialog.pop[open]{ animation:popIn .35s cubic-bezier(.2,1.3,.4,1); }
   <li>אל תחששו לבקש הסבר נוסף</li>
   <li>תנו לעצמכם זמן – הביטחון נבנה מתרגול</li>
  </ul>
- <button class="pop-ok" type="button"><span>הבנתי, ממשיכים!</span></button>
-</div></dialog>
+ <button class="pop-ok" type="button" data-close=""><span>הבנתי, ממשיכים!</span></button>
+</div></div></div>
 
-<div class="conn" aria-hidden="true"></div>
-<section class="finale rv" id="finale">
- <figure class="suit"><img alt="נציגת המוקד מחזיקה חליפת מרוץ בחדר המוקד" src="assets/%D7%AA%D7%9E%D7%95%D7%A0%D7%94%203.png"/><p>קדימה,<br/>לבשו <b>חליפת מרוץ</b>…</p></figure>
- <figure class="startline"><video src="assets/%D7%A1%D7%A8%D7%98%D7%95%D7%9F%201.mp4" autoplay muted loop playsinline aria-label="מבט מתא הנהג של מכונית מרוץ על קו הזינוק"></video><p>…ונתראה על<br/><b>קו הזינוק!</b></p><span class="chk"></span></figure>
-</section>
+
 
 <div class="foot"></div>
 </div>
-
 <script>
 (function(){
- var d=document.documentElement; d.classList.remove("no-js"); d.classList.add("js");
- // popups
+ // pop-ups
  var last=null;
+ function closeAll(){ document.querySelectorAll(".pop-ov").forEach(function(o){ o.hidden=true; }); if(last){ last.focus(); last=null; } }
  document.querySelectorAll("[data-pop]").forEach(function(b){
-  b.addEventListener("click",function(){ var dl=document.getElementById(b.getAttribute("data-pop")); last=b; if(dl.showModal){ dl.showModal(); } else { dl.setAttribute("open",""); } });
+  b.addEventListener("click",function(){ last=b; var o=document.getElementById(b.getAttribute("data-pop")); o.hidden=false; var ok=o.querySelector(".pop-ok"); if(ok) ok.focus(); });
  });
- document.querySelectorAll("dialog.pop").forEach(function(dl){
-  function close(){ if(dl.close){ dl.close(); } else { dl.removeAttribute("open"); } }
-  dl.querySelectorAll(".pop-ok").forEach(function(x){ x.addEventListener("click",close); });
-  dl.addEventListener("click",function(e){ if(e.target===dl) close(); });
-  dl.addEventListener("close",function(){ if(last) last.focus(); });
- });
- // respect reduced motion for the finale video
- if(window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches){ document.querySelectorAll("video[autoplay]").forEach(function(v){ v.removeAttribute("autoplay"); v.pause(); v.controls=true; }); }
+ document.querySelectorAll(".pop-ov").forEach(function(o){ o.addEventListener("click",function(e){ if(e.target===o) closeAll(); }); });
+ document.querySelectorAll("[data-close]").forEach(function(b){ b.addEventListener("click",closeAll); });
+ document.addEventListener("keydown",function(e){ if(e.key==="Escape") closeAll(); });
  // sticky progress bar: shows the current station once the hero scrolls away
  var race=document.querySelector(".race"), hero=document.querySelector(".hero1"), fill=document.querySelector(".race-fill"),
-     dots=[].slice.call(race.querySelectorAll("a")), chs=dots.map(function(a){ return document.querySelector(a.getAttribute("href")); }), fin=document.getElementById("finale"), tick=false;
+     dots=[].slice.call(race.querySelectorAll("a")), chs=dots.map(function(a){ return document.querySelector(a.getAttribute("href")); }), last6=chs[chs.length-1], tick=false;
  function upd(){ tick=false;
   race.classList.toggle("show", hero.getBoundingClientRect().bottom<0);
   var on=-1; chs.forEach(function(c,i){ if(c.getBoundingClientRect().top<innerHeight*.4) on=i; });
   dots.forEach(function(a,i){ a.classList.toggle("on",i===on); a.classList.toggle("done",i<on); });
-  var t0=chs[0].offsetTop, t1=fin.offsetTop+fin.offsetHeight-innerHeight, pr=Math.max(0,Math.min(1,(scrollY-t0)/Math.max(1,t1-t0)));
-  fill.style.width="calc((100% - 32px) * "+pr.toFixed(3)+")";
+  var y=scrollY, t0=chs[0].getBoundingClientRect().top+y, r=last6.getBoundingClientRect(), t1=r.top+y+r.height-innerHeight;
+  fill.style.width="calc((100% - 32px) * "+Math.max(0,Math.min(1,(y-t0)/Math.max(1,t1-t0))).toFixed(3)+")";
  }
  addEventListener("scroll",function(){ if(!tick){ tick=true; requestAnimationFrame(upd); } },{passive:true}); addEventListener("resize",upd); upd();
- // reveal on scroll
- var els=document.querySelectorAll(".rv");
- if(!("IntersectionObserver" in window)){ els.forEach(function(e){ e.classList.add("in"); }); return; }
- var io=new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add("in"); io.unobserve(e.target); } }); },{ rootMargin:"0px 0px -8% 0px" });
- els.forEach(function(e){ io.observe(e); });
 })();
 </script>
 </body>
