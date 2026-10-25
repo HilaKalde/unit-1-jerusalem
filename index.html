@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html class="no-js" dir="rtl" lang="he">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>מאפס ל־106 – מחממים מנועים</title>
+<style>
+@font-face{ font-family:"Assistant"; src:url("assets/fonts/Assistant-VariableFont_wght.ttf") format("truetype"); font-weight:200 800; font-display:swap; }
+:root{ --navy:#0b2d62; --blue:#1b5aab; --sky:#eef5fc; --cyan:#8fd6ff; --red:#e0243a; --yellow:#ffc81f; --ink:#0b2340; --text:#243d5a; --line:#dbe5ee; --green:#3fae49; }
+*{ box-sizing:border-box; }
+html,body{ margin:0; font-family:"Assistant",Arial,sans-serif; }
+html{ scroll-behavior:smooth; }
+body{ direction:rtl; text-align:right; background:#d9e5f3; }
+h1,h2,h3,p,ul,ol{ margin:0; } ul,ol{ padding:0; list-style:none; }
+img{ display:block; max-width:100%; }
+button{ font:inherit; cursor:pointer; }
+button:focus-visible,a:focus-visible{ outline:3px solid var(--cyan); outline-offset:4px; }
+b{ font-weight:800; }
+
+.page{ width:min(900px,100%); margin:0 auto; position:relative; overflow:hidden; background:#fff; color:var(--text); }
+.checker{ height:14px; background:repeating-conic-gradient(#0a1f3f 0 25%,#fff 0 50%) 0 0/14px 14px; }
+.foot{ height:12px; margin-top:56px; background:repeating-linear-gradient(90deg,var(--red) 0 28px,#fff 28px 56px); }
+
+/* ===== header ===== */
+.hdr{ display:flex; justify-content:space-between; align-items:center; padding:24px 34px 0; position:relative; z-index:3; }
+.hdr .prog{ width:150px; } .hdr .prog img{ width:100%; }
+.partners{ display:flex; align-items:center; gap:16px; } .partners img{ height:48px; width:auto; }
+.partners .sep{ width:1.5px; height:44px; background:#c9d4e2; }
+
+/* ===== hero (screen 1) ===== */
+.hero1{ position:relative; height:760px; margin-top:-30px; }
+.hero1 .ph{ position:absolute; left:0; top:0; width:56%; height:100%; background:url("assets/bg_oldcity_road.jpg") 50% 40%/cover no-repeat;
+  -webkit-mask-image:linear-gradient(to right,#000 35%,transparent 100%),linear-gradient(to bottom,transparent 0,#000 18%,#000 80%,transparent 100%); -webkit-mask-composite:source-in;
+  mask-image:linear-gradient(to right,#000 35%,transparent 100%),linear-gradient(to bottom,transparent 0,#000 18%,#000 80%,transparent 100%); mask-composite:intersect; }
+.hero1 .tag{ position:absolute; right:60px; top:112px; background:var(--blue); color:#fff; font-size:27px; font-weight:800; padding:6px 30px 9px; transform:skewX(-8deg) rotate(-3deg); box-shadow:0 8px 14px rgba(11,35,64,.25); }
+.hero1 .tag span{ display:block; transform:skewX(8deg); }
+.hero1 .title{ position:absolute; right:26px; top:160px; width:510px; } .hero1 .title img{ width:100%; filter:drop-shadow(0 10px 12px rgba(11,35,64,.25)); }
+.hero1 .txt{ position:absolute; right:40px; top:340px; width:440px; }
+.hero1 .txt p.lead{ font-size:34px; line-height:1.15; font-weight:800; color:#111; } .hero1 .txt p.lead b{ color:var(--blue); }
+.rainbow{ height:7px; width:100%; border-radius:4px; background:linear-gradient(90deg,#1b9be0,#6cb33f,#ffc81f,#ff9a1f,#e6007e); }
+.hero1 .rainbow{ margin:14px 0; }
+.hero1 .txt p{ font-size:21px; line-height:1.55; margin-bottom:8px; }
+.hero1 .go{ font-size:27px; font-weight:800; color:var(--red); margin-top:8px; }
+.start{ display:inline-flex; align-items:center; gap:12px; margin-top:16px; padding:10px 26px 12px; background:var(--red); color:#fff; font-size:24px; font-weight:800; text-decoration:none; transform:skewX(-8deg); box-shadow:0 8px 16px rgba(224,36,58,.35); transition:transform .2s; }
+.start span{ display:inline-flex; align-items:center; gap:12px; transform:skewX(8deg); }
+.start img{ width:30px; }
+.start:hover{ transform:skewX(-8deg) translateY(-3px); }
+
+/* ===== shared section card ===== */
+.card{ position:relative; margin:0 28px; background:#fff; border-radius:30px; box-shadow:0 14px 34px rgba(11,35,64,.16); padding:34px 36px 30px; }
+.card{ margin-top:0; }
+.card h2{ display:flex; align-items:center; justify-content:center; gap:16px; font-size:35px; font-weight:800; color:#111; text-align:center; line-height:1.15; }
+.card h2 i{ flex:0 0 74px; height:24px; transform:skewX(-20deg); background:repeating-conic-gradient(#1b9be0 0 25%,#fff 0 50%) 0 0/12px 12px; }
+.card .sub-h{ text-align:center; font-size:24px; font-weight:800; color:var(--blue); margin-top:6px; }
+.card p{ font-size:22px; line-height:1.55; }
+.card p.c{ text-align:center; margin:14px auto 0; max-width:720px; }
+.station{ display:table; margin:0 auto 12px; background:var(--yellow); color:var(--ink); font-size:17px; font-weight:800; padding:3px 18px 5px; transform:skewX(-10deg); }
+.station span{ display:block; transform:skewX(10deg); }
+.photo-band{ height:220px; margin:-34px -36px 26px; border-radius:30px 30px 0 0; background:var(--img) center/cover no-repeat; position:relative; }
+.photo-band::after{ content:""; position:absolute; inset:auto 0 0 0; height:90px; background:linear-gradient(to bottom,transparent,#fff); }
+
+/* ===== screen 2 ===== */
+.ic3{ width:104px; height:auto; margin:0 auto 12px; filter:drop-shadow(0 8px 8px rgba(11,35,64,.25)); }
+.aud{ display:grid; grid-template-columns:repeat(4,1fr); margin:24px 0 8px; }
+.aud div{ text-align:center; font-size:23px; font-weight:800; color:var(--ink); line-height:1.2; padding:4px 6px; border-left:1.5px solid var(--line); }
+.aud div:last-child{ border-left:0; }
+.sky{ width:100%; margin-top:8px; }
+.feats{ display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin-top:22px; }
+.feat{ background:var(--sky); border-radius:20px; padding:18px 18px 20px; border-top:6px solid var(--c); }
+.feat h3{ font-size:23px; font-weight:800; color:var(--ink); margin-bottom:6px; line-height:1.2; }
+.feat p{ font-size:19px; line-height:1.45; }
+.fin{ position:relative; display:flex; flex-direction:column; align-items:flex-start; justify-content:center; gap:14px; min-height:250px; margin-top:22px; padding:22px 300px 22px 28px; background:var(--sky); border-radius:22px; }
+.fin .agent{ position:absolute; right:16px; top:0; bottom:0; height:100%; width:auto; max-width:none; }
+.fin p{ margin:0; text-align:right; font-weight:800; color:var(--navy); }
+/* agent images: holding a sign / waving a race flag */
+.fin .agent-wrap{ position:absolute; right:12px; bottom:0; height:calc(100% + 40px); aspect-ratio:1222/1287; z-index:2; }
+.agent-wrap > img{ display:block; width:100%; height:100%; object-fit:contain; }
+.with-sign{ min-height:270px; padding-right:340px; }
+.sign-btn{ position:absolute; left:10%; width:75%; top:59%; height:32%; background:transparent; border:0; border-radius:12px; display:flex; flex-direction:column; align-items:center; justify-content:center; color:var(--ink); font-size:22px; font-weight:800; line-height:1.1; animation:pulse 1.8s ease-in-out infinite; transition:background .2s; }
+.sign-btn b{ color:var(--red); font-size:27px; margin-bottom:2px; }
+.sign-btn:hover{ background:rgba(255,200,31,.28); animation-duration:.9s; }
+.flagbox{ min-height:270px; padding-right:350px; }
+.flag-btn{ position:absolute; left:11%; top:15%; width:34%; height:17%; display:grid; place-items:center; text-align:center; background:#fff; border:3px solid var(--red); border-radius:10px; color:var(--ink); font-size:18px; font-weight:800; line-height:1.05; transform:rotate(17deg); animation:ring 1.8s ease-out infinite; transition:transform .2s; }
+.flag-btn:hover{ transform:rotate(17deg) scale(1.08); }
+@keyframes ring{ 0%{ box-shadow:0 0 0 0 rgba(224,36,58,.55); } 100%{ box-shadow:0 0 0 14px rgba(224,36,58,0); } }
+.sign-y{ display:table; white-space:nowrap; background:var(--yellow); color:var(--ink); font-size:28px; font-weight:800; padding:6px 26px 9px; transform:skewX(-8deg); box-shadow:0 8px 14px rgba(11,35,64,.18); }
+.sign-y span{ display:block; transform:skewX(8deg); }
+
+/* ===== popup trigger bar ===== */
+.tb{ position:relative; margin:56px 28px 0; background:linear-gradient(180deg,#1f64b8,#0b2d62); border-radius:28px; box-shadow:0 14px 26px rgba(11,35,64,.3); }
+.tb::after{ content:""; position:absolute; right:0; bottom:0; width:120px; height:16px; border-radius:0 0 28px 0; background:repeating-conic-gradient(#0a1f3f 0 25%,#fff 0 50%) 0 0/16px 16px; }
+.tb .deco{ position:absolute; left:18px; top:-50px; width:176px; filter:drop-shadow(0 10px 10px rgba(0,0,0,.35)); z-index:2; pointer-events:none; }
+.tb .deco.flag{ width:130px; left:40px; top:-62px; transform:rotate(-8deg); }
+.pop-btn{ display:flex; align-items:center; gap:20px; width:100%; background:none; border:0; padding:26px 30px 26px 220px; color:#fff; text-align:right; }
+.pop-btn .sign,.tb-row .sign{ background:var(--yellow); color:var(--ink); font-size:30px; font-weight:800; padding:6px 26px 9px; transform:skewX(-8deg); }
+.pop-btn .sign span,.tb-row .sign span{ display:block; transform:skewX(8deg); }
+.pop-btn .go{ width:132px; margin-right:auto; animation:pulse 1.8s ease-in-out infinite; }
+.pop-btn:hover .go{ animation-duration:.9s; }
+.tb-row{ display:flex; align-items:center; padding:28px 30px 28px 230px; min-height:104px; }
+.note-btn{ position:absolute; left:36px; top:-58px; width:170px; background:none; border:0; padding:0; z-index:2; filter:drop-shadow(0 10px 10px rgba(0,0,0,.35)); transform:rotate(-6deg); animation:wiggle 2.4s ease-in-out infinite; transition:transform .2s; }
+.note-btn img{ width:100%; }
+.note-btn span{ position:absolute; left:9%; right:9%; top:28%; bottom:8%; display:grid; place-items:center; text-align:center; font-size:25px; font-weight:800; line-height:1.1; color:var(--ink); }
+.note-btn:hover{ animation:none; transform:rotate(-2deg) scale(1.07); }
+@keyframes wiggle{ 0%,100%{ transform:rotate(-6deg); } 50%{ transform:rotate(-2deg); } }
+@keyframes pulse{ 0%,100%{transform:scale(1)} 50%{transform:scale(1.07)} }
+
+/* ===== modal ===== */
+dialog.pop{ width:min(640px,calc(100% - 32px)); border:0; padding:0; border-radius:28px; background:transparent; color:var(--text); overflow:visible; }
+dialog.pop::backdrop{ background:rgba(6,20,45,.62); backdrop-filter:blur(3px); }
+dialog.pop[open]{ animation:popIn .35s cubic-bezier(.2,1.3,.4,1); }
+@keyframes popIn{ from{ transform:scale(.85); opacity:0; } to{ transform:none; opacity:1; } }
+.pop-in{ position:relative; background:#fff; border-radius:28px; padding:40px 34px 30px; box-shadow:0 20px 50px rgba(0,0,0,.35); overflow:hidden; }
+.pop-in::before{ content:""; position:absolute; top:0; left:0; right:0; height:12px; background:repeating-conic-gradient(#0a1f3f 0 25%,#fff 0 50%) 0 0/12px 12px; }
+.pop-in h3{ display:table; background:var(--blue); color:#fff; font-size:26px; font-weight:800; padding:4px 22px 7px; margin:8px 0 16px; transform:skewX(-8deg); }
+.pop-in h3 span{ display:block; transform:skewX(8deg); }
+.pop-in p{ font-size:21px; line-height:1.6; margin-bottom:10px; }
+.pop-in ul li{ position:relative; font-size:20px; line-height:1.5; padding:8px 40px 8px 0; border-bottom:1px dashed var(--line); }
+.pop-in ul li:last-child{ border-bottom:0; }
+.pop-in ul li::before{ content:""; position:absolute; right:0; top:11px; width:26px; height:26px; border-radius:50%; background:var(--red) url("assets/finish_flag_white.png") center/15px no-repeat; }
+.pop-ok{ display:block; margin:18px auto 0; background:var(--red); color:#fff; border:0; font-size:22px; font-weight:800; padding:8px 34px 10px; transform:skewX(-8deg); }
+.pop-ok span{ display:block; transform:skewX(8deg); }
+
+/* ===== glossy icon - ball images made from ic_brief.png ===== */
+.gl{ position:relative; border-radius:50%; display:grid; place-items:center; background:var(--ball) center/100% 100% no-repeat; filter:drop-shadow(0 8px 10px rgba(11,35,64,.25)); }
+.gl svg{ position:relative; fill:#fff; filter:drop-shadow(0 2px 3px rgba(0,30,80,.3)); }
+
+/* ===== screen 3: route of a request ===== */
+.route{ position:relative; margin:30px 0 8px; padding:0 10px; }
+.route .stops{ grid-template-columns:1fr 130px 1fr 130px 1fr; gap:0; }
+.route .stop .pin{ animation:float 3s ease-in-out infinite; }
+.route .stop:nth-child(3) .pin{ animation-delay:.5s; } .route .stop:nth-child(5) .pin{ animation-delay:1s; }
+@keyframes float{ 0%,100%{ transform:translateY(0); } 50%{ transform:translateY(-6px); } }
+.link{ position:relative; height:88px; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:8px; }
+.link .cap{ font-size:15px; font-weight:800; color:var(--blue); background:var(--sky); border-radius:999px; padding:2px 12px 4px; white-space:nowrap; }
+.link .track{ position:relative; width:100%; height:6px; border-radius:3px; background:repeating-linear-gradient(90deg,#9fbde3 0 10px,transparent 10px 18px); animation:flow .9s linear infinite; }
+.link .track::after{ content:""; position:absolute; left:-2px; top:50%; transform:translateY(-50%); border:9px solid transparent; border-left:0; border-right:13px solid var(--blue); }
+.link .packet{ position:absolute; top:50%; right:0; width:18px; height:18px; border-radius:50%; background:var(--yellow); box-shadow:0 0 0 3px #fff,0 3px 8px rgba(0,0,0,.3); transform:translate(50%,-50%); animation:travel 2.4s ease-in-out infinite; }
+.link:nth-child(4) .packet{ animation-delay:1.2s; }
+@keyframes flow{ to{ background-position:-18px 0; } }
+@keyframes travel{ 0%{ right:0; opacity:0; } 12%,88%{ opacity:1; } 100%{ right:100%; opacity:0; } }
+.road{ position:absolute; right:8%; left:8%; top:44px; height:34px; border-radius:17px; background:#2f3640;
+  box-shadow:inset 0 5px 0 -1px #fff,inset 0 -5px 0 -1px #fff; }
+.road::before{ content:""; position:absolute; inset:15px 22px auto; height:4px; background:repeating-linear-gradient(90deg,#fff 0 22px,transparent 22px 40px); }
+.road::after{ content:""; position:absolute; inset:-6px 0 auto; height:6px; border-radius:6px; background:repeating-linear-gradient(90deg,var(--red) 0 18px,#fff 18px 36px); }
+.stops{ position:relative; display:grid; grid-template-columns:repeat(3,1fr); gap:12px; }
+.stop{ text-align:center; }
+.stop .pin{ width:88px; height:88px; margin:0 auto 12px; }
+.stop .pin svg{ width:40px; height:40px; fill:#fff; }
+.stop h3{ font-size:23px; font-weight:800; color:var(--ink); line-height:1.2; }
+.stop p{ font-size:18px; line-height:1.35; color:var(--blue); font-weight:700; }
+.chans{ display:grid; grid-template-columns:1fr 1fr; gap:18px; margin-top:24px; }
+.chan{ border-radius:22px; padding:20px 22px 22px; background:var(--sky); }
+.chan h3{ display:flex; align-items:center; gap:12px; font-size:25px; font-weight:800; color:var(--ink); margin-bottom:10px; }
+.chan h3 .dot{ width:50px; height:50px; flex:none; }
+.chan h3 .dot svg{ width:24px; height:24px; fill:#fff; }
+.chan li{ font-size:20px; line-height:1.4; padding:6px 22px 6px 0; position:relative; }
+.chan li::before{ content:""; position:absolute; right:2px; top:15px; width:10px; height:10px; border-radius:2px; transform:rotate(45deg); background:var(--c); }
+
+/* ===== screen 4: principles ===== */
+.prin{ display:grid; grid-template-columns:repeat(3,1fr); gap:0; margin:28px 0 6px; counter-reset:p; }
+.prin li{ text-align:center; padding:4px 14px; border-left:1.5px solid var(--line); }
+.prin li:last-child{ border-left:0; }
+.prin .ic{ width:104px; height:104px; margin:0 auto 14px; }
+.prin .ic svg{ width:50px; height:50px; }
+.prin .num{ position:absolute; top:-4px; right:-4px; width:32px; height:32px; border-radius:50%; background:var(--yellow); color:var(--ink); font-weight:800; font-size:18px; display:grid; place-items:center; z-index:2; }
+.prin h3{ font-size:28px; font-weight:800; color:var(--ink); }
+.prin p{ font-size:19px; line-height:1.4; margin-top:4px; }
+.value{ display:flex; align-items:center; gap:18px; margin-top:26px; padding:18px 26px; border-radius:22px; background:linear-gradient(90deg,#fff6d6,#ffe9a8); }
+.value .heart{ width:62px; height:62px; flex:none; }
+.value .heart svg{ width:30px; height:30px; fill:#fff; }
+.value p{ font-size:23px; font-weight:800; color:var(--ink); line-height:1.3; }
+.value p small{ display:block; font-size:17px; color:#8a6400; font-weight:800; }
+
+/* ===== screen 5: org ===== */
+.stats{ display:grid; grid-template-columns:repeat(3,1fr); gap:14px; margin:26px 0 10px; }
+.stat{ text-align:center; padding:18px 10px 16px; border-radius:20px; background:linear-gradient(180deg,#1f64b8,#0b2d62); color:#fff; position:relative; overflow:hidden; }
+.stat::after{ content:""; position:absolute; left:0; right:0; bottom:0; height:8px; background:repeating-conic-gradient(#0a1f3f 0 25%,#fff 0 50%) 0 0/8px 8px; }
+.stat .n{ font-size:46px; font-weight:800; line-height:1; color:var(--yellow); }
+.stat .n small{ font-size:22px; color:#fff; }
+.stat .l{ font-size:20px; font-weight:700; margin-top:6px; }
+.org{ display:flex; flex-direction:column; align-items:center; margin:26px 0 6px; }
+.lvl{ display:flex; align-items:center; gap:16px; width:min(460px,100%); padding:12px 18px; border-radius:999px; background:var(--sky); border:2px solid #cfe0f2; }
+.lvl img{ width:64px; height:64px; border-radius:50%; object-fit:cover; flex:none; box-shadow:0 0 0 4px #fff; }
+.lvl b{ font-size:24px; color:var(--ink); }
+.lvl.me{ background:#fff; border:3px solid var(--red); box-shadow:0 10px 22px rgba(224,36,58,.2); position:relative; }
+.lvl.me .here{ margin-right:auto; display:flex; align-items:center; gap:6px; background:var(--red); color:#fff; font-weight:800; font-size:18px; padding:4px 14px 6px 10px; border-radius:999px; animation:bob 1.6s ease-in-out infinite; }
+.lvl.me .here img{ width:22px; height:22px; box-shadow:none; border-radius:0; filter:brightness(0) invert(1); }
+@keyframes bob{ 0%,100%{ transform:translateY(0);} 50%{ transform:translateY(-4px);} }
+.org .link{ width:6px; height:30px; background:repeating-linear-gradient(180deg,var(--blue) 0 6px,transparent 6px 11px); }
+.mid-note{ margin-top:22px; padding:18px 24px; border-radius:22px; background:var(--sky); border-right:8px solid var(--blue); }
+.mid-note h3{ font-size:25px; font-weight:800; color:var(--blue); margin-bottom:4px; }
+.mid-note p{ font-size:20px; }
+
+/* ===== screen 6: team & shift ===== */
+.team{ display:grid; grid-template-columns:repeat(3,1fr); gap:14px; margin-top:24px; }
+.member{ display:flex; align-items:center; gap:12px; padding:14px 14px; border-radius:18px; background:var(--sky); }
+.member .av{ width:56px; height:56px; flex:none; }
+.member .av svg{ width:28px; height:28px; fill:#fff; }
+.member b{ font-size:19px; color:var(--ink); line-height:1.25; }
+.team-all{ display:flex; align-items:center; gap:18px; margin-top:16px; padding:14px 22px; border-radius:20px; background:linear-gradient(90deg,#1f64b8,#0b2d62); color:#fff; }
+.team-all img{ width:74px; height:74px; border-radius:50%; object-fit:cover; flex:none; box-shadow:0 0 0 4px rgba(255,255,255,.35); }
+.team-all p{ font-size:22px; font-weight:800; color:#fff; }
+.shift-h{ display:flex; align-items:center; justify-content:center; gap:12px; margin:36px 0 6px; font-size:30px; font-weight:800; color:#111; }
+.shift-h img{ width:42px; }
+.shift{ position:relative; margin-top:14px; padding-right:62px; }
+.shift::before{ content:""; position:absolute; right:14px; top:10px; bottom:10px; width:34px; border-radius:17px; background:#2f3640; box-shadow:inset 5px 0 0 -1px #fff,inset -5px 0 0 -1px #fff; }
+.shift::after{ content:""; position:absolute; right:29px; top:28px; bottom:28px; width:4px; background:repeating-linear-gradient(180deg,#fff 0 18px,transparent 18px 34px); }
+.shift li{ position:relative; padding:14px 20px 16px; margin-bottom:14px; border-radius:18px; background:var(--sky); }
+.shift li:last-child{ margin-bottom:0; }
+.shift li .k{ position:absolute; right:-62px; top:14px; width:46px; height:46px; border-radius:50%; z-index:1; display:grid; place-items:center; color:#fff; font-weight:800; font-size:22px; background:var(--c); box-shadow:0 0 0 4px #fff; }
+.shift li h3{ font-size:23px; font-weight:800; color:var(--ink); }
+.shift li p{ font-size:19px; line-height:1.45; }
+
+/* ===== screen 7: path & feedback ===== */
+.path{ position:relative; margin:30px 0 6px; }
+.path .road{ top:30px; right:4%; left:4%; }
+.path ol{ position:relative; display:grid; grid-template-columns:repeat(6,1fr); gap:6px; }
+.path li{ text-align:center; }
+.path .pt{ width:64px; height:64px; margin:0 auto 10px; border-radius:50%; display:grid; place-items:center; background:#fff; color:var(--navy); font-size:26px; font-weight:800; border:4px solid var(--c); box-shadow:0 6px 12px rgba(11,35,64,.2); }
+.path li.done .pt{ background:var(--green); border-color:var(--green); color:#fff; }
+.path li.done .pt svg{ width:30px; height:30px; fill:#fff; }
+.path li b{ display:block; font-size:18px; color:var(--ink); line-height:1.25; }
+.path li.done em{ display:inline-block; margin-top:6px; font-style:normal; font-size:15px; font-weight:800; color:#fff; background:var(--green); border-radius:999px; padding:1px 10px 3px; }
+.path .finish{ position:absolute; left:-4px; top:-26px; width:44px; transform:rotate(-10deg); }
+.fb{ display:grid; grid-template-columns:1fr 1fr; gap:18px; margin-top:30px; }
+.fb-box{ border-radius:22px; padding:20px 22px; background:var(--sky); }
+.fb-box p{ font-size:20px; line-height:1.5; }
+.gauge{ display:flex; justify-content:center; gap:14px; margin:4px 0 14px; }
+.gauge svg{ width:58px; height:58px; transition:transform .3s; }
+.gauge svg.on{ transform:scale(1.22); filter:drop-shadow(0 6px 8px rgba(63,174,73,.45)); }
+.finale{ margin:0 28px; display:grid; gap:18px; }
+.finale figure{ position:relative; margin:0; border-radius:26px; overflow:hidden; box-shadow:0 14px 30px rgba(11,35,64,.25); }
+.finale figure img,.finale video{ display:block; width:100%; aspect-ratio:16/9; object-fit:cover; }
+.suit p{ position:absolute; right:5%; top:9%; width:50%; text-align:center; font-size:46px; font-weight:800; line-height:1.15; color:#fff; text-shadow:0 3px 12px rgba(0,0,0,.5); }
+.suit p b{ color:var(--yellow); }
+.startline::after{ content:""; position:absolute; inset:45% 0 0; background:linear-gradient(to bottom,transparent,rgba(5,15,35,.85)); pointer-events:none; }
+.startline p{ position:absolute; z-index:1; right:0; left:0; bottom:8%; text-align:center; font-size:44px; font-weight:800; line-height:1.15; color:#fff; text-shadow:0 3px 12px rgba(0,0,0,.6); }
+.startline p b{ color:var(--yellow); }
+.startline .chk{ position:absolute; z-index:1; left:0; right:0; bottom:0; height:14px; background:repeating-conic-gradient(#0a1f3f 0 25%,#fff 0 50%) 0 0/14px 14px; }
+.safra{ height:280px; background:url("assets/safra.png") center/cover no-repeat,url("assets/ic_city.jpg") center/cover no-repeat; }
+.safra .s-tag{ position:absolute; z-index:2; right:26px; bottom:58px; display:flex; align-items:center; gap:8px; background:#fff; color:var(--ink); font-size:21px; font-weight:800; padding:6px 18px 8px 14px; border-radius:999px; box-shadow:0 8px 16px rgba(11,35,64,.25); }
+.safra .s-tag img{ width:26px; }
+.safra .st-tag{ position:absolute; z-index:2; left:26px; top:20px; display:flex; align-items:center; gap:12px; background:var(--navy); color:#fff; font-size:22px; font-weight:800; padding:6px 18px 8px 8px; border-radius:10px; box-shadow:0 8px 16px rgba(0,0,0,.3); }
+.safra .st-tag i{ width:30px; height:30px; border-radius:4px; background:repeating-conic-gradient(#0a1f3f 0 25%,#fff 0 50%) 0 0/10px 10px; }
+
+/* ===== structure: station badges, road connectors, progress bar ===== */
+.card[id^="ch"],.finale{ scroll-margin-top:84px; }
+.st-badge{ position:absolute; top:-19px; right:34px; z-index:4; display:flex; align-items:center; gap:8px; background:var(--yellow); color:var(--ink); font-size:18px; font-weight:800; padding:4px 18px 6px; transform:skewX(-10deg); box-shadow:0 6px 12px rgba(11,35,64,.2); }
+.st-badge span{ display:block; transform:skewX(10deg); }
+.conn{ position:relative; width:46px; height:78px; margin:0 auto; background:repeating-linear-gradient(180deg,var(--red) 0 12px,#fff 12px 24px) right/6px 100% no-repeat,repeating-linear-gradient(180deg,var(--red) 0 12px,#fff 12px 24px) left/6px 100% no-repeat,#2f3640; }
+.conn::after{ content:""; position:absolute; left:50%; top:6px; bottom:6px; width:4px; transform:translateX(-50%); background:repeating-linear-gradient(180deg,#fff 0 12px,transparent 12px 22px); animation:drive 1s linear infinite; }
+@keyframes drive{ to{ background-position:0 22px; } }
+.card .tb{ margin:64px 0 0; }
+.card .pop-btn .sign,.card .tb-row .sign{ font-size:26px; white-space:nowrap; }
+.next{ display:table; margin:34px auto 0; text-decoration:none; background:var(--navy); color:#fff; border-radius:999px; padding:8px 24px 10px 18px; font-size:19px; font-weight:700; box-shadow:0 8px 16px rgba(11,35,64,.25); transition:transform .2s,background .2s; }
+.next span{ display:flex; align-items:center; gap:10px; }
+.next b{ color:var(--yellow); }
+.next svg{ width:22px; height:22px; fill:#fff; animation:bob 1.6s ease-in-out infinite; }
+.next:hover{ background:var(--blue); transform:translateY(-3px); }
+.race{ position:fixed; top:0; left:50%; z-index:50; width:min(900px,100%); transform:translate(-50%,-110%); transition:transform .35s ease; background:rgba(11,45,98,.97); box-shadow:0 8px 20px rgba(0,0,0,.25); padding:9px 22px 7px; }
+.race.show{ transform:translate(-50%,0); }
+.race-in{ position:relative; display:flex; justify-content:space-between; }
+.race-in::before{ content:""; position:absolute; right:16px; left:16px; top:14px; height:4px; border-radius:2px; background:rgba(255,255,255,.22); }
+.race-fill{ position:absolute; right:16px; top:14px; height:4px; border-radius:2px; width:0; max-width:calc(100% - 32px); background:var(--yellow); transition:width .2s; }
+.race a{ position:relative; z-index:1; display:flex; flex-direction:column; align-items:center; gap:3px; text-decoration:none; color:#bcd3ee; font-size:13px; font-weight:700; }
+.race a i{ width:32px; height:32px; border-radius:50%; display:grid; place-items:center; font-style:normal; font-size:15px; font-weight:800; color:#fff; background:#0b2d62; border:3px solid rgba(255,255,255,.45); transition:transform .2s,background .2s; }
+.race a.done i{ background:var(--yellow); border-color:var(--yellow); color:var(--ink); }
+.race a.on i{ background:var(--red); border-color:#fff; transform:scale(1.15); }
+.race a.on{ color:#fff; }
+
+/* ===== reveal on scroll ===== */
+.js .rv{ opacity:0; transform:translateY(26px); transition:opacity .6s ease,transform .6s ease; }
+.js .rv.in{ opacity:1; transform:none; }
+@media (prefers-reduced-motion:reduce){ .js .rv{ opacity:1; transform:none; transition:none; } .pop-btn .go,.lvl.me .here,.conn::after,.next svg,.sign-btn,.flag-btn,.note-btn,.route .pin,.link .track,.link .packet{ animation:none; } html{ scroll-behavior:auto; } }
+
+/* ===== mobile ===== */
+@media (max-width:760px){
+ .hdr{ padding:14px 14px 0; } .hdr .prog{ width:92px; } .partners{ gap:8px; } .partners img{ height:26px; } .partners .sep{ height:24px; }
+ .hero1{ height:auto; margin-top:0; padding-bottom:36px; }
+ .hero1 .ph{ position:relative; width:100%; height:230px; -webkit-mask-image:linear-gradient(to bottom,#000 70%,transparent 100%); mask-image:linear-gradient(to bottom,#000 70%,transparent 100%); }
+ .hero1 .tag,.hero1 .title,.hero1 .txt{ position:relative; right:auto; top:auto; }
+ .hero1 .tag{ display:table; margin:-28px 20px 0 auto; font-size:19px; padding:4px 20px 6px; }
+ .hero1 .title{ width:310px; max-width:calc(100% - 28px); margin:6px 14px 0 auto; }
+ .hero1 .txt{ width:auto; padding:10px 20px 0; } .hero1 .txt p.lead{ font-size:27px; } .hero1 .txt p{ font-size:18px; } .hero1 .go{ font-size:22px; } .start{ font-size:20px; }
+ .card{ margin:0 12px; padding:30px 16px 22px; border-radius:24px; } .card .tb{ margin:56px 0 0; }
+  .st-badge{ right:18px; font-size:15px; } .next{ font-size:16px; padding:7px 18px 9px 14px; }
+ .race{ padding:7px 10px 5px; } .race a span{ display:none; } .race a i{ width:28px; height:28px; font-size:14px; } .race-in::before,.race-fill{ top:12px; }
+ .fin .agent-wrap{ position:relative; right:auto; bottom:auto; height:240px; align-self:center; margin-top:-34px; } .with-sign,.flagbox{ min-height:0; padding:0 16px 18px; } .sign-btn{ font-size:16px; } .sign-btn b{ font-size:19px; } .flag-btn{ font-size:14px; border-width:2px; }
+ .photo-band{ height:150px; margin:-24px -16px 18px; border-radius:24px 24px 0 0; }
+ .card h2{ font-size:25px; gap:8px; } .card h2 i{ flex:0 0 26px; height:16px; } .card .sub-h{ font-size:19px; } .card p{ font-size:18px; }
+ .aud{ grid-template-columns:repeat(2,1fr); gap:14px 0; } .aud div{ font-size:19px; } .aud div:nth-child(2){ border-left:0; } .ic3{ width:78px; }
+ .feats,.chans,.fb{ grid-template-columns:1fr; }
+ .fin{ min-height:0; padding:0 16px 18px; gap:12px; } .fin .agent{ position:relative; right:auto; top:auto; bottom:auto; height:170px; align-self:flex-start; margin-top:-10px; }
+  .flagbox{ padding:0 16px 18px; } .sign-y{ font-size:20px; padding:4px 16px 6px; }
+ .tb{ margin:56px 12px 0; } .tb .deco{ width:100px; left:4px; top:-34px; } .tb .deco.flag{ width:82px; left:12px; top:-40px; }
+ .pop-btn{ flex-direction:column; align-items:flex-start; padding:18px 16px 26px 16px; gap:12px; } .pop-btn .sign{ font-size:19px; padding:4px 14px 6px; max-width:calc(100% - 90px); } .pop-btn .go{ width:110px; margin-right:0; }
+ .tb-row{ padding:22px 16px 22px 124px; min-height:96px; } .tb-row .sign{ font-size:19px; padding:4px 14px 6px; } .note-btn{ width:108px; left:10px; top:-30px; } .note-btn span{ font-size:16px; }
+ .pop-in{ padding:28px 18px 24px; } .pop-in h3{ font-size:21px; } .pop-in p{ font-size:18px; } .pop-in ul li{ font-size:17.5px; }
+ .road{ display:none; } .stops,.route .stops{ grid-template-columns:1fr; gap:0; }
+ .link{ height:64px; flex-direction:row; justify-content:flex-start; gap:18px; padding-right:29px; }
+ .link .track{ width:6px; height:100%; background:repeating-linear-gradient(180deg,#9fbde3 0 10px,transparent 10px 18px); animation-name:flowv; }
+ .link .track::after{ left:50%; top:auto; bottom:-4px; transform:translateX(-50%); border:8px solid transparent; border-bottom:0; border-top:12px solid var(--blue); }
+ .link .packet{ right:50%; top:0; animation-name:travelv; }
+ @keyframes flowv{ to{ background-position:0 18px; } }
+ @keyframes travelv{ 0%{ top:0; opacity:0; } 12%,88%{ opacity:1; } 100%{ top:100%; opacity:0; } } .stop{ display:flex; align-items:center; gap:14px; text-align:right; } .stop .pin{ margin:0; width:64px; height:64px; flex:none; } .stop .pin svg{ width:30px; height:30px; }
+ .prin{ grid-template-columns:1fr; gap:20px; } .prin li{ border-left:0; border-bottom:1.5px solid var(--line); padding-bottom:18px; } .prin li:last-child{ border-bottom:0; }
+ .value p{ font-size:19px; }
+ .stats{ grid-template-columns:1fr; } .stat .n{ font-size:38px; }
+ .lvl b{ font-size:19px; } .lvl img{ width:48px; height:48px; } .lvl.me .here{ font-size:15px; }
+ .team{ grid-template-columns:1fr; } .team-all p{ font-size:18px; }
+ .shift-h{ font-size:24px; } .shift{ padding-right:54px; } .shift::before{ right:8px; width:30px; } .shift::after{ right:21px; } .shift li .k{ right:-54px; width:42px; height:42px; font-size:19px; } .shift li h3{ font-size:20px; } .shift li p{ font-size:17px; }
+ .path ol{ grid-template-columns:repeat(3,1fr); gap:18px 6px; } .path .finish{ display:none; } .path li b{ font-size:16px; }
+ .finale{ margin:0 12px; } .suit p{ font-size:21px; right:3%; width:52%; } .startline p{ font-size:22px; bottom:12%; }
+ .safra{ height:170px; } .safra .s-tag{ right:12px; bottom:40px; font-size:16px; } .safra .s-tag img{ width:20px; } .safra .st-tag{ left:12px; top:12px; font-size:16px; } .safra .st-tag i{ width:22px; height:22px; }
+}
+@media print{ .js .rv{ opacity:1; transform:none; } }
+</style>
+</head>
+<body>
+<div class="page">
+<nav class="race" aria-label="התקדמות במסלול"><div class="race-in"><span class="race-fill"></span><a href="#ch1"><i>1</i><span>מתחילים להכיר</span></a><a href="#ch2"><i>2</i><span>מוקד 106</span></a><a href="#ch3"><i>3</i><span>תדר 106</span></a><a href="#ch4"><i>4</i><span>החוליה המקשרת</span></a><a href="#ch5"><i>5</i><span>צוות המרוץ</span></a><a href="#ch6"><i>6</i><span>אוטוטו בקו הזינוק</span></a></div></nav>
+<div class="checker"></div>
+
+<!-- ============ מסך 1 – פתיחה ============ -->
+<header class="hdr">
+ <div class="prog"><img alt="לוגו התוכנית מאפס ל-106 – ב-6 תחנות" src="assets/logo_maefes_1.png"/></div>
+ <div class="partners"><img alt="לוגו עיריית ירושלים" src="assets/logo_jerusalem_crop.png"/><span class="sep"></span><img alt="לוגו מוקד 106" src="assets/logo_moked106_crop.png"/></div>
+</header>
+
+<section class="hero1">
+ <div class="ph" role="img" aria-label="כביש מרוץ למרגלות חומות העיר העתיקה, ירושלים"></div>
+ <div class="tag"><span>ברוכים הבאים</span></div>
+ <h1 class="title"><img alt="מאפס ל־106 – מחממים מנועים" src="assets/title_sign.png"/></h1>
+ <div class="txt">
+  <p class="lead">איזה כיף שהצטרפתם אלינו.<br/>עוד רגע נפגשים על <b>קו הזינוק</b><br/>ויש הרבה לגלות…</p>
+  <div class="rainbow"></div>
+  <p>הכנו לכם היכרות קצרה עם המוקד העירוני שעובד ללא הפסקה – 24/7: מי אנחנו, מה קורה כאן, מי יהיה לצידכם ואיך תיראה הדרך שלכם לתפקיד.</p>
+  <p class="go">בואו נכיר מקרוב.</p>
+  <a class="start" href="#ch1"><span>הזינוק לפניך <img alt="" aria-hidden="true" src="assets/finish_flag_white.png"/></span></a>
+ </div>
+</section>
+
+<!-- ============ מסך 2 – מתחילים להכיר ============ -->
+<section class="card rv" id="ch1"><span class="st-badge"><span>תחנה 1 מתוך 6</span></span>
+ <h2><i></i><span>לפני שעולים לקו הזינוק, מתחילים להכיר</span><i></i></h2>
+ <p class="c">מוקד עירוני הוא מרכז השירות של ירושלים. כאן פוגשים את העיר כמו שהיא באמת: אנשים, שאלות, מצבים וסיפורים שמשתנים מרגע לרגע.</p>
+ <p class="c">במהלך הדרך שלכם במוקד תפגשו</p>
+ <div class="aud">
+  <div><img alt="" aria-hidden="true" class="ic3" src="assets/ic_house.png"/>תושבים ותושבות</div>
+  <div><img alt="" aria-hidden="true" class="ic3" src="assets/ic_brief.png"/>בעלי עסקים</div>
+  <div><img alt="" aria-hidden="true" class="ic3" src="assets/ic_camera.png"/>מבקרים</div>
+  <div><img alt="" aria-hidden="true" class="ic3" src="assets/ic_pin.png"/>תיירים</div>
+ </div>
+ <p class="c">– כל מי שזקוק למידע, הכוונה או סיוע.</p>
+ <img alt="" aria-hidden="true" class="sky" src="assets/skyline.png"/>
+ <div class="feats">
+  <div class="feat" style="--c:#1b9be0"><h3>ירושלים מכל הזוויות</h3><p>ירושלים מגיעה למוקד דרך אנשים, שאלות ומגוון סיפורים.</p></div>
+  <div class="feat" style="--c:#e6007e"><h3>קצב משתנה</h3><p>יש רגעים שקטים ויש רגעים אינטנסיביים, וכל יום נראה קצת אחרת.</p></div>
+  <div class="feat" style="--c:#ff8a00"><h3>השפעה אמיתית</h3><p>גם מענה קצר ומדויק יכול לשנות את החוויה של האזרח בעיר.</p></div>
+ </div>
+ <div class="fin with-sign"><div class="agent-wrap"><img alt="נציגת המוקד מחזיקה שלט" src="assets/%D7%A0%D7%A6%D7%99%D7%92%D7%AA%20%D7%A9%D7%99%D7%A8%D7%95%D7%AA%20%D7%9E%D7%97%D7%96%D7%99%D7%A7%D7%94%20%D7%A9%D7%9C%D7%98%20%D7%9C%D7%91%D7%9F.png"/><button class="sign-btn" type="button" data-pop="pop-2" aria-haspopup="dialog"><b>אל דאגה!</b>לחצו עלי להרחבה</button></div><p>זהו הצעד הראשון שלכם, לפני נקודת הזינוק: להכיר את המוקד, את הקצב ואת האנשים, ויחד לצאת למרוץ ולתת את השירות המקצועי והטוב ביותר.<br/><span style="color:var(--blue)">אנחנו כאן כדי ללוות, ללמד ולעזור לכם להרגיש חלק – כבר מהשיחה הראשונה.</span></p></div>
+ <a class="next" href="#ch2"><span>לתחנה הבאה: <b>מוקד 106</b><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M11 4h2v12l5-5 1.4 1.4L12 19.8l-7.4-7.4L6 11l5 5V4Z"/></svg></span></a>
+</section>
+
+<dialog class="pop" id="pop-2" aria-labelledby="pop-2-h"><div class="pop-in">
+ <h3 id="pop-2-h"><span>אל דאגה!</span></h3>
+ <p><b>כמו כל צוות מרוץ, כך גם אתם – מקבלים הכנה.</b></p>
+ <p>לא מצופה מכם לדעת הכול ביום הראשון. תהליך ההכשרה בנוי בצורה הדרגתית. אנחנו נתרגל יחד ונעניק לכם את כל הכלים והביטחון לפני שתוזנקו לדרך עצמאית על הקו.</p>
+ <button class="pop-ok" type="button"><span>הבנתי, ממשיכים!</span></button>
+</div></dialog>
+
+<!-- ============ מסך 3 – המקום שבו העיר והאזרחים נפגשים ============ -->
+<div class="conn" aria-hidden="true"></div>
+<section class="card rv" id="ch2"><span class="st-badge"><span>תחנה 2 מתוך 6</span></span>
+ <div class="photo-band" style="--img:url('assets/bg_bridge_road.jpg')" role="img" aria-label="גשר המיתרים בירושלים"></div>
+ <h2><i></i><span>מוקד 106</span><i></i></h2>
+ <p class="sub-h">המקום שבו העיר והאזרחים – נפגשים</p>
+ <div class="route" aria-label="מפת המסלול של פנייה">
+  <div class="stops">
+   <div class="stop"><div class="pin gl" style="--c:#1b5aab;--c2:#4fa3ff;--ball:url('assets/ball_blue.png')"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0 2c-4.4 0-9 2.2-9 5.5V22h18v-2.5c0-3.3-4.6-5.5-9-5.5Z"/></svg></div><div><h3>פניית תושב</h3></div></div>
+   <div class="link" aria-hidden="true"><span class="cap">שיחה / דיווח</span><span class="track"><i class="packet"></i></span></div>
+   <div class="stop"><div class="pin gl" style="--c:#e0243a;--c2:#ff7a86;--ball:url('assets/ball_magenta.png')"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a9 9 0 0 0-9 9v5a3 3 0 0 0 3 3h2v-7H5v-1a7 7 0 0 1 14 0v1h-3v7h3v1h-5v2h5a2 2 0 0 0 2-2v-9a9 9 0 0 0-9-9Z"/></svg></div><div><h3>מוקד 106</h3><p>הבנה, סיווג ותיעוד</p></div></div>
+   <div class="link" aria-hidden="true"><span class="cap">העברה לטיפול</span><span class="track"><i class="packet"></i></span></div>
+   <div class="stop"><div class="pin gl" style="--c:#2e9e3e;--c2:#7fdc6e;--ball:url('assets/ball_orange.png')"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 2 7v2h20V7L12 2ZM4 11v7h3v-7H4Zm6.5 0v7h3v-7h-3ZM17 11v7h3v-7h-3ZM2 20v2h20v-2H2Z"/></svg></div><div><h3>הגורם המטפל בעירייה</h3></div></div>
+  </div>
+ </div>
+ <p class="c">המוקד הוא הכתובת המרכזית והראשונה לכל אזרח ואזרחית, לקבלת מידע ולדיווח על נושאים שונים הקשורים לעיר ולמרחב הציבורי. על מנת לתת מענה מקצועי, אנחנו פועלים בשני ערוצים מרכזיים ומקיפים:</p>
+ <div class="chans">
+  <div class="chan" style="--c:#e0243a"><h3><span class="dot gl" style="--ball:url('assets/ball_red.png')"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 1 21h22L12 2Zm1 15h-2v-2h2v2Zm0-4h-2V9h2v4Z"/></svg></span>פניות ודיווחים</h3>
+   <ul><li>מפגעי ניקיון ותברואה</li><li>תקלות תאורה</li><li>בטיחות בדרכים</li><li>תקלות במרחב הציבורי</li></ul></div>
+  <div class="chan" style="--c:#1b5aab"><h3><span class="dot gl" style="--ball:url('assets/ball_blue.png')"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm1 15h-2v-6h2v6Zm0-8h-2V7h2v2Z"/></svg></span>ערוץ מידע</h3>
+   <ul><li>מידע על כתובות, דרכי התקשרות ושעות פעילות של מחלקות בעירייה</li><li>אירועים ותרבות</li><li>חסימות כבישים</li></ul></div>
+ </div>
+ <div class="fin flagbox"><div class="agent-wrap"><img alt="נציגת המוקד מניפה דגל מרוץ" src="assets/%D7%90%D7%99%D7%A9%D7%94%20%D7%9E%D7%A0%D7%99%D7%A4%D7%94%20%D7%93%D7%92%D7%9C%20%D7%9E%D7%99%D7%A8%D7%95%D7%A5%20%D7%91%D7%97%D7%92%D7%99%D7%92%D7%94.png"/><button class="flag-btn" type="button" data-pop="pop-3" aria-haspopup="dialog">לחצו עלי<br/>להרחבה</button></div><span class="sign-y"><span>הסוד של שיחה טובה</span></span></div>
+ <a class="next" href="#ch3"><span>לתחנה הבאה: <b>תדר 106</b><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M11 4h2v12l5-5 1.4 1.4L12 19.8l-7.4-7.4L6 11l5 5V4Z"/></svg></span></a>
+</section>
+<dialog class="pop" id="pop-3" aria-labelledby="pop-3-h"><div class="pop-in">
+ <h3 id="pop-3-h"><span>מורידים הילוך</span></h3>
+ <p>בכל שיחה עלינו להוריד הילוך, כי המטרה היא <b>"לזקק" את הצורך של התושב</b>: להקשיב, לשאול את השאלות הנכונות ולהוביל את הפנייה עד למענה המדויק ביותר.</p>
+ <button class="pop-ok" type="button"><span>הבנתי, ממשיכים!</span></button>
+</div></dialog>
+
+<!-- ============ מסך 4 – תדר 106 ============ -->
+<div class="conn" aria-hidden="true"></div>
+<section class="card rv" id="ch3"><span class="st-badge"><span>תחנה 3 מתוך 6</span></span>
+ <div class="photo-band safra" role="img" aria-label="כיכר ספרא, ירושלים – כאן נמצא המוקד"><span class="st-tag"><i></i>הזנק / סיום</span><span class="s-tag"><img alt="" aria-hidden="true" src="assets/pin_red.png"/>כיכר ספרא – כאן נמצא המוקד</span></div>
+ <h2><i></i><span>תדר 106 – הדרך שלנו לשדר שירות</span><i></i></h2>
+ <p class="c">עבור האזרחים, אנחנו <b>הפנים והלב של השירות העירוני</b>. במוקד העירוני מעניקים שירות מותאם ורגיש לקהל המגוון של ירושלים, בשפות שונות ובהתאמה לאנשים עם מוגבלויות.</p>
+ <p class="c">חוויית השירות של כל אחת ואחד מהאזרחים מתחילה ומסתיימת בדרך שבה נוביל את השיחה. לכן אנחנו פועלים לפי שלושה עקרונות:</p>
+ <ol class="prin">
+  <li><div class="ic gl" style="--c:#0a52d6;--c2:#58a8ff;--ball:url('assets/ball_blue.png')"><span class="num">1</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 2 .7 3.3 1.6 4.4.8 1 1.4 1.7 1.4 3.1A4.5 4.5 0 0 0 12.5 21c2 0 3.5-1.2 4.1-2.9l-1.9-.7c-.3.9-1.1 1.6-2.2 1.6A2.5 2.5 0 0 1 10 16.5c0-2.1-1-3.3-1.9-4.4C7.4 11.3 7 10.5 7 9a5 5 0 0 1 10 0h2a7 7 0 0 0-7-7Zm0 4a3 3 0 0 0-3 3h2a1 1 0 0 1 2 0c0 .6-.3.9-.9 1.4-.6.5-1.1 1.2-1.1 2.6h2c0-.6.3-.9.9-1.4.6-.5 1.1-1.2 1.1-2.6a3 3 0 0 0-3-3Z"/></svg></div><h3>להקשיב</h3><p>לתת לתושב מקום לבטא את צרכיו.</p></li>
+  <li><div class="ic gl" style="--c:#d1007a;--c2:#ff6ec4;--ball:url('assets/ball_magenta.png')"><span class="num">2</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 2a8 8 0 0 1 6.3 12.9l5.4 5.4-1.4 1.4-5.4-5.4A8 8 0 1 1 10 2Zm0 2a6 6 0 1 0 0 12 6 6 0 0 0 0-12Zm-.2 8.6h1.6V14H9.8v-1.4Zm.8-7.4c1.6 0 2.8 1 2.8 2.4 0 1.2-.7 1.8-1.3 2.2-.5.3-.7.5-.7 1v.3H9.8v-.4c0-1.1.6-1.6 1.1-1.9.5-.3.8-.5.8-1.1 0-.6-.5-1-1.1-1-.7 0-1.1.4-1.2 1.1L7.8 7.5c.2-1.4 1.3-2.3 2.8-2.3Z"/></svg></div><h3>להבין</h3><p>לזהות את הצורך המדויק באמצעות שאלות מקצועיות.</p></li>
+  <li><div class="ic gl" style="--c:#f05a00;--c2:#ffb347;--ball:url('assets/ball_orange.png')"><span class="num">3</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21.7 9.3 19 6.6V3h-2.6l-1.4-1.4L12 4.6 9 1.6 7.6 3H5v3.6L2.3 9.3 4 11l-1 1 4.5 4.5L9 18l3 3 3-3 1.5-1.5L21 12l-1-1 1.7-1.7ZM12 18.2 6 12.2l1.4-1.4L10 13.4l6.6-6.6L18 8.2l-6 6v4Z"/></svg></div><h3>לסייע</h3><p>לפתוח פנייה, לתת מידע או לכוון ליעד הנכון.</p></li>
+ </ol>
+ <div class="value"><span class="heart gl" style="--c:#e0243a;--ball:url('assets/ball_red.png')"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7.5-4.6-9.6-9.3C.9 8.3 3 4.5 6.7 4.5c2.1 0 3.6 1.1 4.3 2.4h2c.7-1.3 2.2-2.4 4.3-2.4 3.7 0 5.8 3.8 4.3 7.2C19.5 16.4 12 21 12 21Z"/></svg></span><p><small>הערך שמוביל אותנו</small>שירות מכבד ומותאם לכל אדם</p></div>
+
+ <section class="tb"><img alt="" aria-hidden="true" class="deco flag" src="assets/flag.png"/>
+ <button class="pop-btn" type="button" data-pop="pop-4" aria-haspopup="dialog"><span class="sign"><span>שירות טוב מתחיל ברצון לעזור</span></span><img alt="לחצו עלי" class="go" src="assets/btn_click.png"/></button>
+</section>
+ <a class="next" href="#ch4"><span>לתחנה הבאה: <b>החוליה המקשרת</b><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M11 4h2v12l5-5 1.4 1.4L12 19.8l-7.4-7.4L6 11l5 5V4Z"/></svg></span></a>
+</section>
+<dialog class="pop" id="pop-4" aria-labelledby="pop-4-h"><div class="pop-in">
+ <h3 id="pop-4-h"><span>אנחנו 'מגדילים ראש'</span></h3>
+ <p>גם אם פנו אלינו בנושא שאינו באחריות העירייה – נספק את המידע או נכוון את התושב.</p>
+ <p><b>שירות טוב מתחיל ברצון לעזור!</b></p>
+ <button class="pop-ok" type="button"><span>הבנתי, ממשיכים!</span></button>
+</div></dialog>
+
+<!-- ============ מסך 5 – מבנה העירייה ============ -->
+<div class="conn" aria-hidden="true"></div>
+<section class="card rv" id="ch4"><span class="st-badge"><span>תחנה 4 מתוך 6</span></span>
+ <div class="photo-band" style="--img:url('assets/ic_admin.jpg')" role="img" aria-label="רחוב בירושלים עם הרכבת הקלה"></div>
+ <h2><i></i><span>מוקד 106 הוא החוליה המקשרת</span><i></i></h2>
+ <p class="c">עיריית ירושלים היא ארגון רחב ומגוון, המעניק שירות למאות אלפי אזרחים.</p>
+ <div class="stats">
+  <div class="stat"><div class="n"><small>כ־</small>10</div><div class="l">מינהלים</div></div>
+  <div class="stat"><div class="n">עשרות</div><div class="l">אגפים מקצועיים</div></div>
+  <div class="stat"><div class="n">מאות</div><div class="l">מחלקות ונפות בשטח</div></div>
+ </div>
+ <div class="org" aria-label="המיקום של המוקד בעירייה">
+  <div class="lvl"><img alt="" aria-hidden="true" src="assets/ic_city.jpg"/><b>עיריית ירושלים</b></div>
+  <span class="link" aria-hidden="true"></span>
+  <div class="lvl"><img alt="" aria-hidden="true" src="assets/ic_admin.jpg"/><b>מינהל התפעול</b></div>
+  <span class="link" aria-hidden="true"></span>
+  <div class="lvl me"><img alt="" aria-hidden="true" src="assets/ic_106.jpg"/><b>מוקד 106</b><span class="here"><img alt="" aria-hidden="true" src="assets/pin_red.png"/>אתם כאן</span></div>
+ </div>
+ <div class="mid-note">
+  <h3>אנחנו ה"עיניים" של העיר</h3>
+  <p>המוקד משויך למינהל התפעול. אנו עובדים מול מאות המחלקות והיחידות העירוניות כדי לשמור על שגרת חיים תקינה ובטוחה.</p>
+ </div>
+
+ <section class="tb">
+ <div class="tb-row"><span class="sign"><span>מול מי אנחנו עובדים?</span></span></div>
+ <button class="note-btn" type="button" data-pop="pop-5" aria-haspopup="dialog"><img alt="" aria-hidden="true" src="assets/sticky.png"/><span>לחצו עלי<br/>להרחבה</span></button>
+</section>
+ <a class="next" href="#ch5"><span>לתחנה הבאה: <b>צוות המרוץ</b><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M11 4h2v12l5-5 1.4 1.4L12 19.8l-7.4-7.4L6 11l5 5V4Z"/></svg></span></a>
+</section>
+<dialog class="pop" id="pop-5" aria-labelledby="pop-5-h"><div class="pop-in">
+ <h3 id="pop-5-h"><span>השותפים שלנו למסלול</span></h3>
+ <p>רוב עבודת המוקד מתבצעת מול אגפי מינהל התפעול, ובראשם אגפי <b>התברואה, שפ"ע ואכיפה</b>.</p>
+ <p>המוקד מנתב את המידע להמשך טיפול – למחלקות השטח ולגורמי חוץ נוספים כמו: משטרה, חברת חשמל ועוד.</p>
+ <button class="pop-ok" type="button"><span>הבנתי, ממשיכים!</span></button>
+</div></dialog>
+
+<!-- ============ מסך 6 – צוות המרוץ ============ -->
+<div class="conn" aria-hidden="true"></div>
+<section class="card rv" id="ch5"><span class="st-badge"><span>תחנה 5 מתוך 6</span></span>
+ <h2><i></i><span>צוות המרוץ</span><i></i></h2>
+ <p class="sub-h">מערך הא.נשים שלצידכם</p>
+ <p class="c">במוקד 106 אתם אף פעם לא לבד – לצידכם פועל צוות שלם.</p>
+ <div class="team">
+  <div class="member" style="--c:#0b2d62"><span class="av gl" style="--ball:url('assets/ball_navy.png')"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2 2.4 4.9 5.4.8-3.9 3.8.9 5.4L12 14.4l-4.8 2.5.9-5.4-3.9-3.8 5.4-.8L12 2Zm-7 18h14v2H5v-2Z"/></svg></span><b>מנהל המוקד</b></div>
+  <div class="member" style="--c:#1b5aab"><span class="av gl" style="--ball:url('assets/ball_blue.png')"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0 2c-4.4 0-9 2.2-9 5.5V22h18v-2.5c0-3.3-4.6-5.5-9-5.5Z"/></svg></span><b>מנהלת מחלקה בכירה לשירות</b></div>
+  <div class="member" style="--c:#1b9be0"><span class="av gl" style="--ball:url('assets/ball_cyan.png')"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 1 9l11 6 9-4.9V17h2V9L12 3Zm-6 9.2V16c0 1.7 2.7 4 6 4s6-2.3 6-4v-3.8l-6 3.3-6-3.3Z"/></svg></span><b>מנהלת תחום קליטה והכשרה</b></div>
+  <div class="member" style="--c:#e6007e"><span class="av gl" style="--ball:url('assets/ball_magenta.png')"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6h-3V4a2 2 0 0 0-2-2H9a2 2 0 0 0-2 2v2H4a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2ZM9 4h6v2H9V4Zm4 11v2h-2v-2H9v-2h2v-2h2v2h2v2h-2Z"/></svg></span><b>מנהלת מחלקה בכירה לתפעול ולוגיסטיקה</b></div>
+  <div class="member" style="--c:#ff8a00"><span class="av gl" style="--ball:url('assets/ball_orange.png')"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4.5C7 4.5 2.7 7.6 1 12c1.7 4.4 6 7.5 11 7.5s9.3-3.1 11-7.5c-1.7-4.4-6-7.5-11-7.5Zm0 12.5a5 5 0 1 1 0-10 5 5 0 0 1 0 10Zm0-8a3 3 0 1 0 0 6 3 3 0 0 0 0-6Z"/></svg></span><b>מנהל תחום בכיר לבקרה</b></div>
+  <div class="member" style="--c:#e0243a"><span class="av gl" style="--ball:url('assets/ball_red.png')"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm0 18a8 8 0 1 1 0-16 8 8 0 0 1 0 16Zm.5-13H11v6l5.2 3.2.8-1.3-4.5-2.7V7Z"/></svg></span><b>אחמ"ש – אחראי/ת משמרת</b></div>
+ </div>
+ <div class="team-all"><img alt="" aria-hidden="true" src="assets/ic_106.jpg"/><p>וצוות המוקדנים והמוקדניות – החברים לעבודה.</p></div>
+
+ <h3 class="shift-h"><img alt="" aria-hidden="true" src="assets/flag.png"/>איך נראית המשמרת?</h3>
+ <ol class="shift">
+  <li><span class="k" style="--c:#1b9be0">1</span><h3>הגעה והתארגנות</h3><p>רישום ל"דף הפסקות": שווה להגיע מוקדם! הראשונים לחתום – יוצאים ראשונים להפסקה.</p></li>
+  <li><span class="k" style="--c:#3fae49">2</span><h3>התחברות למערכות</h3><p>בהתאם לסידור העבודה – מחוברים למערכות ומוכנים לשיחה ראשונה.</p></li>
+  <li><span class="k" style="--c:#ff8a00">3</span><h3>עמדת העבודה</h3><p>סביבה טכנולוגית מתקדמת עם שני מסכים, מערכות מידע ואוזניות אישיות חדשות לכל נציג.</p></li>
+  <li><span class="k" style="--c:#e6007e">4</span><h3>תדריך</h3><p>מעבר על דגשים יומיים או זרקור על מידע חשוב.</p></li>
+ </ol>
+
+ <section class="tb"><img alt="" aria-hidden="true" class="deco" src="assets/helmet.png"/>
+ <button class="pop-btn" type="button" data-pop="pop-6" aria-haspopup="dialog"><span class="sign"><span>אווירה טובה במוקד</span></span><img alt="לחצו עלי" class="go" src="assets/btn_click.png"/></button>
+</section>
+ <a class="next" href="#ch6"><span>לתחנה הבאה: <b>אוטוטו בקו הזינוק</b><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M11 4h2v12l5-5 1.4 1.4L12 19.8l-7.4-7.4L6 11l5 5V4Z"/></svg></span></a>
+</section>
+<dialog class="pop" id="pop-6" aria-labelledby="pop-6-h"><div class="pop-in">
+ <h3 id="pop-6-h"><span>סביבת עבודה נעימה</span></h3>
+ <p>אנחנו מאמינים שסביבת עבודה נעימה ואווירה טובה הן המפתח לשירות טוב:</p>
+ <ul>
+  <li>שוברי קפה ומאפה כהערכה על עבודה טובה והצלחה במבחני ידע</li>
+  <li>בימי שלישי – ישיבות צוות שבועיות</li>
+  <li>פעילויות גיבוש מגוונות</li>
+  <li>התחשבות בסטודנטים – אנחנו יודעים שהלימודים חשובים לכם. לכן אנו מאפשרים יום חופש לפני מבחן וביום המבחן, כדי שתוכלו להצליח בראש שקט!</li>
+ </ul>
+ <button class="pop-ok" type="button"><span>הבנתי, ממשיכים!</span></button>
+</div></dialog>
+
+<!-- ============ מסך 7 – אוטוטו בקו הזינוק ============ -->
+<div class="conn" aria-hidden="true"></div>
+<section class="card rv" id="ch6"><span class="st-badge"><span>תחנה 6 מתוך 6</span></span>
+ <h2><i></i><span>אוטוטו בקו הזינוק…</span><i></i></h2>
+ <p class="c">רגע לפני היום הראשון, הכרתם את המוקד העירוני, את התפקיד שלו בחיבור בין התושבים לעירייה, את האנשים שילוו אתכם ואת מה שמחכה לכם בהמשך.</p>
+ <p class="c">זה היה <b>שלב החימום הראשון</b> שלכם במסלול "מאפס ל־106", ואותו כבר אפשר לסמן כ<b style="color:var(--green)">הושלם</b>. מכאן, מסלול ההכשרה ימשיך בהדרגה, תחנה אחר תחנה, עד שתהיו מוכנים לעלות על קו הזינוק – קו הטלפון – בביטחון.</p>
+
+ <h3 class="shift-h">המסלול שלכם מאפס ל־106</h3>
+ <div class="path">
+  <div class="road" aria-hidden="true"></div>
+  <img alt="" aria-hidden="true" class="finish" src="assets/flag.png"/>
+  <ol>
+   <li class="done"><div class="pt"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 16.2-4.2-4.2-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2Z"/></svg></div><b>היכרות</b><em>הושלם</em></li>
+   <li><div class="pt" style="--c:#1b9be0">2</div><b>מערכות העבודה</b></li>
+   <li><div class="pt" style="--c:#3fae49">3</div><b>מפת העירייה, אגפים וממשקים</b></li>
+   <li><div class="pt" style="--c:#ff8a00">4</div><b>תהליך העבודה מפנייה לסגירה</b></li>
+   <li><div class="pt" style="--c:#e6007e">5</div><b>תרגול שירות</b></li>
+   <li><div class="pt" style="--c:#e0243a">6</div><b>שגרה, עומס וחירום</b></li>
+  </ol>
+ </div>
+
+ <h3 class="shift-h">איך תדעו שאתם מתקדמים במסלול?</h3>
+ <p class="c">לאורך ההכשרה וגם בהמשך העבודה, תקבלו משוב שיעזור לכם להבין איפה אתם כבר חזקים ומה כדאי להמשיך לתרגל.</p>
+ <div class="fb">
+  <div class="fb-box">
+   <div class="gauge" aria-hidden="true">
+    <svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="22" fill="#e0243a"/><circle cx="17" cy="19" r="3" fill="#fff"/><circle cx="31" cy="19" r="3" fill="#fff"/><path d="M15 35c4-5 14-5 18 0" stroke="#fff" stroke-width="3.5" fill="none" stroke-linecap="round"/></svg>
+    <svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="22" fill="#ffc81f"/><circle cx="17" cy="19" r="3" fill="#0b2340"/><circle cx="31" cy="19" r="3" fill="#0b2340"/><path d="M15 32h18" stroke="#0b2340" stroke-width="3.5" stroke-linecap="round"/></svg>
+    <svg class="on" viewBox="0 0 48 48"><circle cx="24" cy="24" r="22" fill="#3fae49"/><circle cx="17" cy="19" r="3" fill="#fff"/><circle cx="31" cy="19" r="3" fill="#fff"/><path d="M14 28c4 7 16 7 20 0" stroke="#fff" stroke-width="3.5" fill="none" stroke-linecap="round"/></svg>
+   </div>
+   <p>מערכת <b>"הסמיילי המחייך"</b> – הערכת נציגים תהיה לוח המחוונים האישי שלכם. וכשהסמיילי יחייך, הצופר יפעל וכולם יפרגנו.</p>
+  </div>
+  <div class="fb-box">
+   <p>אנחנו מאמינים <b>במשוב בונה ובגובה העיניים</b> – בכל חודש תוכלו לראות את ההישגים שלכם, לראות בדיוק איפה אתם אלופים ואיפה אפשר להשתפר. מעבר לזה, סגל המוקד תמיד כאן לשיחות אישיות וטיפים.</p>
+  </div>
+ </div>
+
+ <section class="tb"><img alt="" aria-hidden="true" class="deco" src="assets/helmet.png"/>
+ <button class="pop-btn" type="button" data-pop="pop-7" aria-haspopup="dialog"><span class="sign"><span>4 טיפים להתחלה טובה</span></span><img alt="לחצו עלי" class="go" src="assets/btn_click.png"/></button>
+</section>
+ <a class="next" href="#finale"><span>ממשיכים <b>לקו הזינוק</b><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M11 4h2v12l5-5 1.4 1.4L12 19.8l-7.4-7.4L6 11l5 5V4Z"/></svg></span></a>
+</section>
+<dialog class="pop" id="pop-7" aria-labelledby="pop-7-h"><div class="pop-in">
+ <h3 id="pop-7-h"><span>4 טיפים להתחלה טובה</span></h3>
+ <ul>
+  <li>רשמו שאלות שעולות במהלך ההכשרה</li>
+  <li>השתמשו במחברת או בקובץ אישי לסיכומים</li>
+  <li>אל תחששו לבקש הסבר נוסף</li>
+  <li>תנו לעצמכם זמן – הביטחון נבנה מתרגול</li>
+ </ul>
+ <button class="pop-ok" type="button"><span>הבנתי, ממשיכים!</span></button>
+</div></dialog>
+
+<div class="conn" aria-hidden="true"></div>
+<section class="finale rv" id="finale">
+ <figure class="suit"><img alt="נציגת המוקד מחזיקה חליפת מרוץ בחדר המוקד" src="assets/%D7%AA%D7%9E%D7%95%D7%A0%D7%94%203.png"/><p>קדימה,<br/>לבשו <b>חליפת מרוץ</b>…</p></figure>
+ <figure class="startline"><video src="assets/%D7%A1%D7%A8%D7%98%D7%95%D7%9F%201.mp4" autoplay muted loop playsinline aria-label="מבט מתא הנהג של מכונית מרוץ על קו הזינוק"></video><p>…ונתראה על<br/><b>קו הזינוק!</b></p><span class="chk"></span></figure>
+</section>
+
+<div class="foot"></div>
+</div>
+
+<script>
+(function(){
+ var d=document.documentElement; d.classList.remove("no-js"); d.classList.add("js");
+ // popups
+ var last=null;
+ document.querySelectorAll("[data-pop]").forEach(function(b){
+  b.addEventListener("click",function(){ var dl=document.getElementById(b.getAttribute("data-pop")); last=b; if(dl.showModal){ dl.showModal(); } else { dl.setAttribute("open",""); } });
+ });
+ document.querySelectorAll("dialog.pop").forEach(function(dl){
+  function close(){ if(dl.close){ dl.close(); } else { dl.removeAttribute("open"); } }
+  dl.querySelectorAll(".pop-ok").forEach(function(x){ x.addEventListener("click",close); });
+  dl.addEventListener("click",function(e){ if(e.target===dl) close(); });
+  dl.addEventListener("close",function(){ if(last) last.focus(); });
+ });
+ // respect reduced motion for the finale video
+ if(window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches){ document.querySelectorAll("video[autoplay]").forEach(function(v){ v.removeAttribute("autoplay"); v.pause(); v.controls=true; }); }
+ // sticky progress bar: shows the current station once the hero scrolls away
+ var race=document.querySelector(".race"), hero=document.querySelector(".hero1"), fill=document.querySelector(".race-fill"),
+     dots=[].slice.call(race.querySelectorAll("a")), chs=dots.map(function(a){ return document.querySelector(a.getAttribute("href")); }), fin=document.getElementById("finale"), tick=false;
+ function upd(){ tick=false;
+  race.classList.toggle("show", hero.getBoundingClientRect().bottom<0);
+  var on=-1; chs.forEach(function(c,i){ if(c.getBoundingClientRect().top<innerHeight*.4) on=i; });
+  dots.forEach(function(a,i){ a.classList.toggle("on",i===on); a.classList.toggle("done",i<on); });
+  var t0=chs[0].offsetTop, t1=fin.offsetTop+fin.offsetHeight-innerHeight, pr=Math.max(0,Math.min(1,(scrollY-t0)/Math.max(1,t1-t0)));
+  fill.style.width="calc((100% - 32px) * "+pr.toFixed(3)+")";
+ }
+ addEventListener("scroll",function(){ if(!tick){ tick=true; requestAnimationFrame(upd); } },{passive:true}); addEventListener("resize",upd); upd();
+ // reveal on scroll
+ var els=document.querySelectorAll(".rv");
+ if(!("IntersectionObserver" in window)){ els.forEach(function(e){ e.classList.add("in"); }); return; }
+ var io=new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add("in"); io.unobserve(e.target); } }); },{ rootMargin:"0px 0px -8% 0px" });
+ els.forEach(function(e){ io.observe(e); });
+})();
+</script>
+</body>
+</html>
